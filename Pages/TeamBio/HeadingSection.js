@@ -4,10 +4,7 @@ import Heading from "../../Components/Heading";
 
 const HeadingSection = () => {
   return (
-    <Container
-      fluid
-      className="d-flex justify-content-center align-items-center"
-    >
+    <Container fluid>
       <Heading topHeading="Meet the team" bottomHeading="Expert Chefs" />
     </Container>
   );
