@@ -41,7 +41,7 @@ const Heading = ({ topHeading = "", bottomHeading = "" }) => {
 };
 
 const StyledContainer = styled(Container)`
-  margin: 30px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 `;
 
 export default Heading;
