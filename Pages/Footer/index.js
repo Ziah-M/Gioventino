@@ -6,49 +6,61 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <ThemedContainer height='75vh' bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-      <Container fluid style={{ paddingTop:'100px' }}>
-        <Row>
-          <Col xs={12} className="d-flex justify-content-center">
-            <Heading
-              topHeading="Be the first to know"
-              bottomHeading="Subscribe"
-            />
-          </Col>
-        </Row>
-        <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-            <Text>
-              Subscribe to our Newsletter to
-              <br />
-              get exciting offers and be the first to hear about upcoming events
-            </Text>
-          </Col>
-        </Row>
-        <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-            <input type="text" />
-          </Col>
-        </Row>
-        <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-            <SocialButtons />
-          </Col>
-        </Row>
-        <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-            <Copywrite />
-          </Col>
-        </Row>
-      </Container>
+    <ThemedContainer
+      height="75vh"
+      bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    >
+      <Row style={{ height: "75vh",  }}>
+        <Col
+          xs={12}
+          className="d-flex flex-column justify-content-center align-items-center"
+        >
+          <Row>
+            <Col
+              xs={12}
+              className="d-flex justify-content-center align-items-center"
+            >
+              <Heading
+                topHeading="Be the first to know"
+                bottomHeading="Subscribe"
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center">
+              <Text>
+                Subscribe to our Newsletter to
+                <br />
+                get exciting offers and be the first to hear about upcoming
+                events
+              </Text>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center">
+              <input type="text" />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center">
+              <SocialButtons />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="d-flex justify-content-center">
+              <Copywrite />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     </ThemedContainer>
   );
 };
 
-const Text=styled.p`
-text-align:center;
-color:${props => props.theme.darkText};
-`
+const Text = styled.p`
+  text-align: center;
+  color: ${props => props.theme.darkText};
+`;
 
 const SocialButtons = () => {
   return <div>Social Buttons here</div>;
