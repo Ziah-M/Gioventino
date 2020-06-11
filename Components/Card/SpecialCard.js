@@ -1,40 +1,59 @@
 import React from "react";
-import { Card, Row } from "react-bootstrap";
+import { Card, Row as UnstyledRow, Col as UnstyledCol } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import Button from "../Buttons/StyledButton";
 
 const bgColor = "rgb(32,33,39)";
 
-const SpecialCard = (props) => {
+const SpecialCard = props => {
   const {
     title = "ITALIAN PIZZA",
     text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy.",
     oldPrice = "$40",
     newPrice = "$20",
-    discount = "20%",
+    discount = "20%"
   } = props;
   return (
     <StyledCard>
       <StyledCardBody>
-        <Title>{title}</Title>
-
-        <Discount>
-          <b>{discount} OFF</b>
-        </Discount>
-        <Row style={{ margin: "20px" }}>
-          <OldPrice>{oldPrice}</OldPrice>
-          <DiscountPrice>{newPrice}</DiscountPrice>
+        <Row>
+          <Title>{title}</Title>
         </Row>
-        <StyledText>{text}</StyledText>
-        <Button>
-          <b>ORDER NOW -></b>
-        </Button>
+        <Row>
+          <Col xs={12}>
+            <Discount>
+              <b>{discount} OFF</b>
+            </Discount>
+          </Col>
+          <Col>
+            <OldPrice>{oldPrice}</OldPrice>
+            <DiscountPrice>{newPrice}</DiscountPrice>
+          </Col>
+        </Row>
+        <Row>
+          <StyledText>{text}</StyledText>
+        </Row>
+        <Row>
+          <Button>
+            <b>ORDER NOW -></b>
+          </Button>
+        </Row>
       </StyledCardBody>
     </StyledCard>
   );
 };
 
 // BOOTSTRAP STYLES
+
+const Col = styled(UnstyledCol)`
+display:flex;
+justify-content:center;
+align-items:center;
+`
+
+const Row = styled(UnstyledRow)`
+  margin:20px;
+`
 
 const StyledText = styled(Card.Text)`
   color: #a19fa0;
