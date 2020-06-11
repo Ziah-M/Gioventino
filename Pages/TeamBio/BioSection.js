@@ -9,12 +9,12 @@ const BioSection = () => {
     <Container fluid>
       <Row>
         <HeadingCol xs={12}>
-          <h1>John Dough</h1>
+          <Name>John Dough</Name>
         </HeadingCol>
       </Row>
       <Row>
         <SubheadingCol xs={12}>
-          <h2>Head Chef</h2>
+          <Position>Head Chef</Position>
         </SubheadingCol>
       </Row>
       <Row>
@@ -41,8 +41,16 @@ const BioSection = () => {
   );
 };
 
+const Name = styled.h1`
+  color:#deb150;
+`
+
+const Position = styled.h3`
+color:#deb150;
+`
+
 const HeadingCol = styled(Col)`
-  margin: 20px 0 10px 0;
+  margin: 0px 0 10px 0;
   text-align: center;
 `;
 
