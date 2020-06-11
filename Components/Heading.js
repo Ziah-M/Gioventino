@@ -29,7 +29,7 @@ const H1 = styled.h1`
   position: relative;
   display: block;
   font-family: "Montserrat", sans-serif;
-  margin: 0 0 70px 0;
+  margin: 0;
 `;
 const Heading = ({ topHeading = "", bottomHeading = "" }) => {
   return (

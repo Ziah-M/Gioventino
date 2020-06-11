@@ -13,12 +13,12 @@ const TeamBio = () => {
           <HeadingSection />
         </Row>
 
-        <Row style={{ display: "flex", alignItems: "center" }}>
+        <Row>
           <Col xs={6} className="d-flex justify-content-center">
             <ImageSection />
           </Col>
 
-          <Col xs={6} className="d-flex justify-content-center">
+          <Col xs={6}>
             <BioSection />
           </Col>
         </Row>
