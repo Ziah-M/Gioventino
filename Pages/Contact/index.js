@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <ThemedContainer>
       <Container fluid style={{ height: "100vh" }}>
-        <Row>
+        <Row style={{ height: "100%" }}>
           <Col
             xs={12}
             className="d-flex justify-content-center align-items-center"
