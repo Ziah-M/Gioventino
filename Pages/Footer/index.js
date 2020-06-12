@@ -2,7 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/ImgTheme";
-import { Container, Row, Col } from "react-bootstrap";
+import {
+  Container,
+  Row as UnstyledRow,
+  Col,
+  InputGroup as UnstyledInputGroup,
+  FormControl
+} from "react-bootstrap";
 
 const Footer = () => {
   return (
@@ -10,10 +16,15 @@ const Footer = () => {
       height="75vh"
       bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     >
-      <Row style={{ height: "75vh",  }}>
+      <UnstyledRow
+        style={{
+          height: "75vh",
+          padding: "15vh 0"
+        }}
+      >
         <Col
           xs={12}
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="d-flex flex-column justify-content-between align-items-center"
         >
           <Row>
             <Col
@@ -38,7 +49,12 @@ const Footer = () => {
           </Row>
           <Row>
             <Col xs={12} className="d-flex justify-content-center">
-              <input type="text" />
+              <InputGroup>
+                <Control placeholder="Email" />
+                <InputGroup.Prepend>
+                  <InputIcon>@</InputIcon>
+                </InputGroup.Prepend>
+              </InputGroup>
             </Col>
           </Row>
           <Row>
@@ -48,14 +64,51 @@ const Footer = () => {
           </Row>
           <Row>
             <Col xs={12} className="d-flex justify-content-center">
-              <Copywrite />
+              <Copywrite>&copy; 2020 All Rights Reserved</Copywrite>
             </Col>
           </Row>
         </Col>
-      </Row>
+      </UnstyledRow>
     </ThemedContainer>
   );
 };
+
+const InputGroup = styled(UnstyledInputGroup)`
+  border: 1px solid white;
+  width: 50vw;
+  max-width: 500px;
+`;
+
+const Control = styled(FormControl)`
+  color: black;
+  background: transparent;
+`;
+
+const IconContainer = styled.div`
+  border-radius: 50%;
+  border: 1px solid #434448;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: #a8a8a8;
+  width: 45px;
+  height: 45px;
+  margin: 0px 5px;
+
+  &:hover {
+    color: black;
+    background: #deb150;
+    border: 1px solid #deb150;
+  }
+`;
+
+const InputIcon = styled(InputGroup.Text)`
+  color: black;
+  background-color: #deb150;
+`;
+
+const Row = styled(UnstyledRow)``;
 
 const Text = styled.p`
   text-align: center;
@@ -63,11 +116,19 @@ const Text = styled.p`
 `;
 
 const SocialButtons = () => {
-  return <div>Social Buttons here</div>;
+  return (
+    <div>
+      <IconContainer>F</IconContainer>
+      <IconContainer>T</IconContainer>
+      <IconContainer>G</IconContainer>
+      <IconContainer>P</IconContainer>
+      <IconContainer>Y</IconContainer>
+    </div>
+  );
 };
 
-const Copywrite = () => {
-  return <p>(C). 2020. All Rights Reserved.</p>;
-};
+const Copywrite = styled.p`
+  color: white;
+`;
 
 export default Footer;
