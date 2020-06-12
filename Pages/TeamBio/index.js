@@ -2,8 +2,9 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemedContainer } from "../../Themes/DarkTheme";
 import HeadingSection from "./HeadingSection";
-import ImageSection from "./ImageSection";
+import Slider from "./Slider";
 import BioSection from "./BioSection";
+import Portrait from "./Portrait";
 
 const TeamBio = () => {
   return (
@@ -22,12 +23,17 @@ const TeamBio = () => {
           <HeadingSection />
         </Row>
 
-        <Row>
-          <Col xs={6} className="d-flex justify-content-center">
-            <ImageSection />
+        <Row className="d-flex justify-content-center mt-3">
+          <Col xs={12}>
+            <Slider />
           </Col>
+        </Row>
 
+        <Row noGutters className="d-flex justify-content-center">
           <Col xs={6}>
+            <Portrait />
+          </Col>
+          <Col xs={6} className="d-flex flex-column justify-content-center">
             <BioSection />
           </Col>
         </Row>
