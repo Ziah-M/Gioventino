@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 const ProductCategoryFilter = ({ categories = ["All"] }) => {
-  const [selected, setSelected] = useState("All");
+  const [selected, setSelected] = useState(categories[0]);
   return (
     <StyledContainer fluid>
       <Row noGutters>
