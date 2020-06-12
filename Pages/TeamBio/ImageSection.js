@@ -45,13 +45,12 @@ const ImageSection = () => {
 const Portrait = styled.img`
   height: 45vw;
   width: 30vw;
-  margin-top:3vw;
+  margin-top: 3vw;
 `;
 
 const SliderPortrait = styled.img`
   height: 10vw;
   width: 10vw;
-
 `;
 
 export default ImageSection;

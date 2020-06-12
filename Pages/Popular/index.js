@@ -31,7 +31,16 @@ const DEFAULT_PRODUCTS = [
 const Popular = () => {
   return (
     <ThemedContainer bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-      <Container fluid style={{ minHeight: "100vh" }}>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Heading

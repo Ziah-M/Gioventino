@@ -16,7 +16,7 @@ const Landing = () => {
 const Content = ({
   topHeading = "Welcome to",
   middleHeading = "TASTE",
-  bottomHeading = "Sydney's best Pizza",
+  bottomHeading = "Sydney's best Pizza"
 }) => {
   return (
     <Wrapper>
@@ -28,7 +28,7 @@ const Content = ({
           <BrandName>{middleHeading}</BrandName>
         </Col>
         <Col xs={12}>
-  <Tagline>{bottomHeading}</Tagline>
+          <Tagline>{bottomHeading}</Tagline>
         </Col>
         <Col
           xs={12}

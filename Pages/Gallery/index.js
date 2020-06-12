@@ -12,7 +12,7 @@ const PRODUCT_CATEGORIES = [
   "Desert",
   "Dinner",
   "Breakfast",
-  "Lunch",
+  "Lunch"
 ];
 
 const DEFAULT_PRODUCTS = [
@@ -20,56 +20,65 @@ const DEFAULT_PRODUCTS = [
     img:
       "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     heading: "Burrito",
-    subheading: "Lunch",
+    subheading: "Lunch"
   },
   {
     img:
       "https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     heading: "Smashed Avo",
-    subheading: "Breakfast",
+    subheading: "Breakfast"
   },
   {
     img:
       "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     heading: "Chicken Fried Rice",
-    subheading: "Dinner",
+    subheading: "Dinner"
   },
   {
     img:
       "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     heading: "Bacon Burger & Chips",
-    subheading: "Lunch",
+    subheading: "Lunch"
   },
   {
     img:
       "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     heading: "Potato Wedge Salad",
-    subheading: "Dinner",
+    subheading: "Dinner"
   },
   {
     img:
       "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     heading: "Grass Fed Steak",
-    subheading: "Dinner",
+    subheading: "Dinner"
   },
   {
     img:
       "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     heading: "Pepperoni Pizza",
-    subheading: "Dinner",
+    subheading: "Dinner"
   },
   {
     img:
       "https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     heading: "Supreme Pizza",
-    subheading: "Dinner",
-  },
+    subheading: "Dinner"
+  }
 ];
 
 const Gallery = () => {
   return (
     <ThemedContainer>
-      <Container fluid style={{ minHeight: "100vh", }}>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Heading
@@ -85,15 +94,15 @@ const Gallery = () => {
         </Row>
         <Row>
           <CardGroup>
-          {DEFAULT_PRODUCTS.map((item) => (
-            <Col xs={6} sm={4} md={3}>
-              <GalleryCard
-                imageUrl={item.img}
-                heading={item.heading}
-                subheading={item.subheading}
-              />
+            {DEFAULT_PRODUCTS.map(item => (
+              <Col xs={6} sm={4} md={3}>
+                <GalleryCard
+                  imageUrl={item.img}
+                  heading={item.heading}
+                  subheading={item.subheading}
+                />
               </Col>
-          ))}
+            ))}
           </CardGroup>
         </Row>
       </Container>

@@ -4,11 +4,19 @@ import { EventsCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/ImgTheme";
 
-
 const Events = () => {
   return (
     <ThemedContainer bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-      <Container fluid style={{ height: "100vh",  }}>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Heading
@@ -18,9 +26,8 @@ const Events = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={6} className="d-flex justify-content-center" >
+          <Col xs={6} className="d-flex justify-content-center">
             <EventsCard />
-     
           </Col>
           <Col xs={6} className="d-flex justify-content-center">
             <EventsCard />
