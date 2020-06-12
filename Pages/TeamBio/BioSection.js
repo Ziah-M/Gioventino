@@ -35,19 +35,21 @@ const BioSection = () => {
         </TextTwoCol>
       </Row>
       <Row>
-        <SocialCol xs={12}>TODO: Social Buttons</SocialCol>
+        <SocialCol xs={12}>
+          <SocialButtons />
+        </SocialCol>
       </Row>
     </Container>
   );
 };
 
 const Name = styled.h1`
-  color:#deb150;
-`
+  color: #deb150;
+`;
 
 const Position = styled.h3`
-color:#deb150;
-`
+  color: #deb150;
+`;
 
 const HeadingCol = styled(Col)`
   margin: 0px 0 10px 0;
@@ -73,5 +75,36 @@ const TextTwoCol = styled(Col)`
   margin: 15px 0;
   text-align: center;
 `;
+
+const IconContainer = styled.div`
+  border-radius: 50%;
+  border: 1px solid #434448;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: #a8a8a8;
+  width: 45px;
+  height: 45px;
+  margin: 0px 5px;
+
+  &:hover {
+    color: black;
+    background: #deb150;
+    border: 1px solid #deb150;
+  }
+`;
+
+const SocialButtons = () => {
+  return (
+    <div>
+      <IconContainer>F</IconContainer>
+      <IconContainer>T</IconContainer>
+      <IconContainer>G</IconContainer>
+      <IconContainer>P</IconContainer>
+      <IconContainer>Y</IconContainer>
+    </div>
+  );
+};
 
 export default BioSection;
