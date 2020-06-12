@@ -84,6 +84,18 @@ const Control = styled(FormControl)`
   background: transparent;
 `;
 
+const InputIcon = styled(InputGroup.Text)`
+  color: black;
+  background-color: #deb150;
+`;
+
+const Row = styled(UnstyledRow)``;
+
+const Text = styled.p`
+  text-align: center;
+  color: ${props => props.theme.darkText};
+`;
+
 const IconContainer = styled.div`
   border-radius: 50%;
   border: 1px solid #434448;
@@ -101,18 +113,6 @@ const IconContainer = styled.div`
     background: #deb150;
     border: 1px solid #deb150;
   }
-`;
-
-const InputIcon = styled(InputGroup.Text)`
-  color: black;
-  background-color: #deb150;
-`;
-
-const Row = styled(UnstyledRow)``;
-
-const Text = styled.p`
-  text-align: center;
-  color: ${props => props.theme.darkText};
 `;
 
 const SocialButtons = () => {

@@ -8,7 +8,16 @@ import { ThemedContainer } from "../../Themes/DarkTheme";
 const Booking = () => {
   return (
     <ThemedContainer>
-      <Container fluid style={{ height: "100vh", display:'flex', flexDirection:'column', justifyContent:'center' }}>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Heading topHeading="Reserve a table" bottomHeading="Reservation" />
@@ -54,11 +63,14 @@ const Booking = () => {
                       <Col xs={12} sm={6} md={4} />
                       <Col xs={12} sm={6} md={4} />
                     </Form.Row>
-                    <Form.Row style={{dispaly:'flex', justifyContent:'center'}}>
-                  <Button style={{margin:'0 0 0 0'}}>BOOK TABLE -></Button>
-                  </Form.Row>
+                    <Form.Row
+                      style={{ dispaly: "flex", justifyContent: "center" }}
+                    >
+                      <Button style={{ margin: "0 0 0 0" }}>
+                        BOOK TABLE ->
+                      </Button>
+                    </Form.Row>
                   </StyledForm>
-
                 </StyledInnerContainer>
               </StyledCardBody>
             </StyledCard>
@@ -68,6 +80,8 @@ const Booking = () => {
     </ThemedContainer>
   );
 };
+
+//NOTE !important overwrites bootstrap active classes
 
 const Control = styled(Form.Control)`
   background: transparent !important;

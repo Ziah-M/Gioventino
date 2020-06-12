@@ -8,7 +8,16 @@ import ContactCard from "../../Components/Card/ContactCard";
 const Contact = () => {
   return (
     <ThemedContainer>
-      <Container fluid style={{ height: "100vh" }}>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row style={{ height: "100%" }}>
           <Col
             xs={12}

@@ -8,7 +8,16 @@ import BioSection from "./BioSection";
 const TeamBio = () => {
   return (
     <ThemedContainer>
-      <Container fluid>
+      <Container
+        fluid
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100vh"
+        }}
+      >
         <Row>
           <HeadingSection />
         </Row>
