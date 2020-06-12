@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { ButtonDark as Button } from "../../Components/Buttons/StyledButton";
+import { ButtonAlt as Button } from "../../Components/Buttons/StyledButton";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/DarkTheme";
 
@@ -66,9 +66,7 @@ const Booking = () => {
                     <Form.Row
                       style={{ dispaly: "flex", justifyContent: "center" }}
                     >
-                      <Button style={{ margin: "0 0 0 0" }}>
-                        BOOK TABLE ->
-                      </Button>
+                      <Button>BOOK TABLE -></Button>
                     </Form.Row>
                   </StyledForm>
                 </StyledInnerContainer>
@@ -107,7 +105,7 @@ const StyledCardBody = styled(Card.Body)`
 
 const StyledForm = styled(Form)`
   background: ${props => props.theme.primaryAccent};
-  padding-bottom: 50px;
+  padding: 25px 0px;
   border-bottom: 2px solid ${props => props.theme.lightText};
 `;
 
