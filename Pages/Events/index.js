@@ -12,7 +12,7 @@ const Events = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           alignItems: "center",
           minHeight: "100vh"
         }}
@@ -25,11 +25,11 @@ const Events = () => {
             />
           </Col>
         </Row>
-        <Row>
-          <Col xs={6} className="d-flex justify-content-center">
+        <Row className="d-flex justify-content-center">
+          <Col sm={9} md={5} className="d-flex justify-content-center">
             <EventsCard />
           </Col>
-          <Col xs={6} className="d-flex justify-content-center">
+          <Col sm={9} md={5} className="d-flex justify-content-center">
             <EventsCard />
           </Col>
         </Row>
