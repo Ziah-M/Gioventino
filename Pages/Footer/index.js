@@ -9,6 +9,7 @@ import {
   InputGroup as UnstyledInputGroup,
   FormControl
 } from "react-bootstrap";
+import SocialButtons from "../../Components/SocialButtons";
 
 const Footer = () => {
   return (
@@ -95,37 +96,6 @@ const Text = styled.p`
   text-align: center;
   color: ${props => props.theme.darkText};
 `;
-
-const IconContainer = styled.div`
-  border-radius: 50%;
-  border: 1px solid #434448;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  color: #a8a8a8;
-  width: 45px;
-  height: 45px;
-  margin: 0px 5px;
-
-  &:hover {
-    color: black;
-    background: #deb150;
-    border: 1px solid #deb150;
-  }
-`;
-
-const SocialButtons = () => {
-  return (
-    <div>
-      <IconContainer>F</IconContainer>
-      <IconContainer>T</IconContainer>
-      <IconContainer>G</IconContainer>
-      <IconContainer>P</IconContainer>
-      <IconContainer>Y</IconContainer>
-    </div>
-  );
-};
 
 const Copywrite = styled.p`
   color: white;
