@@ -19,38 +19,26 @@ const DEFAULT_CHEFS = [
   }
 ];
 
-const ImageSection = () => {
+const Slider = () => {
   return (
     <Container fluid>
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
-          <Container fluid className="d-flex justify-content-center">
             {DEFAULT_CHEFS.map(chef => (
               <Col>
                 <SliderPortrait src={chef.imageUrl} />
               </Col>
             ))}
-          </Container>
         </Col>
       </Row>
-      <Row>
-        <Col xs={12} className="d-flex justify-content-center">
-          <Portrait src={DEFAULT_CHEFS[0].imageUrl} />
-        </Col>
-      </Row>
+
     </Container>
   );
 };
-
-const Portrait = styled.img`
-  height: 45vw;
-  width: 30vw;
-  margin-top: 3vw;
-`;
 
 const SliderPortrait = styled.img`
   height: 10vw;
   width: 10vw;
 `;
 
-export default ImageSection;
+export default Slider;

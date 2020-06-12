@@ -3,7 +3,12 @@ import styled from "styled-components";
 import { ThemedContainer } from "../../Themes/DarkTheme";
 import Heading from "../../Components/Heading";
 import { GalleryCard } from "../../Components/Card";
-import { Container, Row, Col, CardGroup } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  CardGroup as UnstyledCardGroup
+} from "react-bootstrap";
 import ProductCategorySelector from "../../Components/ProductSelector";
 
 const PRODUCT_CATEGORIES = [
@@ -74,7 +79,7 @@ const Gallery = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           alignItems: "center",
           minHeight: "100vh"
         }}
@@ -88,20 +93,22 @@ const Gallery = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} className="d-flex justify-content-center">
+          <Col
+            xs={12}
+            className="d-flex justify-content-center"
+            style={{ margin: "15px 0" }}
+          >
             <ProductCategorySelector categories={PRODUCT_CATEGORIES} />
           </Col>
         </Row>
-        <Row>
+        <Row noGutters>
           <CardGroup>
             {DEFAULT_PRODUCTS.map(item => (
-              <Col xs={6} sm={4} md={3}>
-                <GalleryCard
-                  imageUrl={item.img}
-                  heading={item.heading}
-                  subheading={item.subheading}
-                />
-              </Col>
+              <GalleryCard
+                imageUrl={item.img}
+                heading={item.heading}
+                subheading={item.subheading}
+              />
             ))}
           </CardGroup>
         </Row>
@@ -109,5 +116,9 @@ const Gallery = () => {
     </ThemedContainer>
   );
 };
+
+const CardGroup = styled(UnstyledCardGroup)`
+  margin: 0px 25px;
+`;
 
 export default Gallery;

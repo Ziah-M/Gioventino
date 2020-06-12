@@ -9,6 +9,9 @@ import {
   InputGroup as UnstyledInputGroup,
   FormControl
 } from "react-bootstrap";
+import SocialButtons from "../../Components/SocialButtons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -52,7 +55,9 @@ const Footer = () => {
               <InputGroup>
                 <Control placeholder="Email" />
                 <InputGroup.Prepend>
-                  <InputIcon>@</InputIcon>
+                  <InputIcon>
+                    <FontAwesomeIcon icon={faLocationArrow} />
+                  </InputIcon>
                 </InputGroup.Prepend>
               </InputGroup>
             </Col>
@@ -74,19 +79,31 @@ const Footer = () => {
 };
 
 const InputGroup = styled(UnstyledInputGroup)`
-  border: 1px solid white;
+  border: 1px solid #a8a8a8 !important;
+  outline: none !important;
   width: 50vw;
   max-width: 500px;
 `;
 
 const Control = styled(FormControl)`
-  color: black;
-  background: transparent;
+  color: #a8a8a8 !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  &::placeholder {
+    color: #a8a8a8 !important;
+  }
 `;
 
 const InputIcon = styled(InputGroup.Text)`
   color: black;
   background-color: #deb150;
+  border: none !important;
+
+  &:hover {
+    color: #deb150;
+    background-color: black;
+  }
 `;
 
 const Row = styled(UnstyledRow)``;
@@ -95,37 +112,6 @@ const Text = styled.p`
   text-align: center;
   color: ${props => props.theme.darkText};
 `;
-
-const IconContainer = styled.div`
-  border-radius: 50%;
-  border: 1px solid #434448;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  color: #a8a8a8;
-  width: 45px;
-  height: 45px;
-  margin: 0px 5px;
-
-  &:hover {
-    color: black;
-    background: #deb150;
-    border: 1px solid #deb150;
-  }
-`;
-
-const SocialButtons = () => {
-  return (
-    <div>
-      <IconContainer>F</IconContainer>
-      <IconContainer>T</IconContainer>
-      <IconContainer>G</IconContainer>
-      <IconContainer>P</IconContainer>
-      <IconContainer>Y</IconContainer>
-    </div>
-  );
-};
 
 const Copywrite = styled.p`
   color: white;
