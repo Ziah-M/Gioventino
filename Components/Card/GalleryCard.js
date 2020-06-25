@@ -44,8 +44,8 @@ const WIDTH_AND_HEIGHT = "250px";
 const StyledContainer = styled(Container)`
   max-width: ${WIDTH_AND_HEIGHT};
   max-height: ${WIDTH_AND_HEIGHT};
-  height: 20vw;
-  width: 20vw;
+  height: ${WIDTH_AND_HEIGHT};
+  width: ${WIDTH_AND_HEIGHT};
   padding: 0px;
 
   background-size: cover;
