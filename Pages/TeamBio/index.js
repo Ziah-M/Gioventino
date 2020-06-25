@@ -29,8 +29,14 @@ const TeamBio = () => {
           </Col>
         </Row>
 
-        <Row noGutters className="d-flex justify-content-center">
-          <Col xs={6}>
+        <Row
+          noGutters
+          className="d-flex justify-content-center align-items-center"
+        >
+          <Col
+            xs={6}
+            className="d-flex flex-column justify-content-center align-items-center"
+          >
             <Portrait />
           </Col>
           <Col xs={6} className="d-flex flex-column justify-content-center">

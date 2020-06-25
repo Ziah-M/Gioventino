@@ -26,10 +26,20 @@ const Events = () => {
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
-          <Col sm={9} md={5} className="d-flex justify-content-center">
+          <Col
+            sm={9}
+            md={5}
+            className="d-flex justify-content-center"
+            style={{ margin: "0 20px 20px 0 " }}
+          >
             <EventsCard />
           </Col>
-          <Col sm={9} md={5} className="d-flex justify-content-center">
+          <Col
+            sm={9}
+            md={5}
+            className="d-flex justify-content-center"
+            style={{ margin: "0 20px 20px 0 " }}
+          >
             <EventsCard />
           </Col>
         </Row>

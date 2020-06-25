@@ -27,7 +27,7 @@ const GalleryCard = props => {
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      <StyledCard show={show} >
+      <StyledCard show={show}>
         <StyledCardBody>
           <PseudoButton>+</PseudoButton>
           <StyledTitle>{heading}</StyledTitle>
@@ -39,15 +39,13 @@ const GalleryCard = props => {
 };
 
 // TODO - TEMPORARY JUST FOR TESTING PURPOSES
-const WIDTH_AND_HEIGHT='250px'
+const WIDTH_AND_HEIGHT = "250px";
 
 const StyledContainer = styled(Container)`
-  min-width: ${WIDTH_AND_HEIGHT};
   max-width: ${WIDTH_AND_HEIGHT};
-  min-height: ${WIDTH_AND_HEIGHT};
   max-height: ${WIDTH_AND_HEIGHT};
-  height:${WIDTH_AND_HEIGHT};
-  width:${WIDTH_AND_HEIGHT};
+  height: 20vw;
+  width: 20vw;
   padding: 0px;
 
   background-size: cover;
@@ -62,7 +60,7 @@ const StyledTitle = styled(Card.Title)`
   color: white;
   margin: 0;
   font-size: 2em;
-  text-align:center;
+  text-align: center;
 `;
 
 const PseudoButton = styled.div`
@@ -84,7 +82,7 @@ const StyledCard = styled(Card)`
   height: 100%;
   width: 100%;
   display: none;
-  padding:10%;
+  padding: 10%;
   margin: 0px;
   transition: 400ms ease;
   transition-property: display;
