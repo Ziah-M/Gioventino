@@ -43,25 +43,21 @@ const TeamBioSlider = ({ chefs = DEFAULT_CHEFS }) => {
   return (
     <>
       <Container fluid className="p-0" style={{ width: "60vw" }}>
-        <Row noGutters>
-          <Col>
-            <Slider {...settings}>
-              {chefs.map(chef => (
-                <Col className="p-0">
-                  <ChefPortrait src={chef.imageUrl} alt="chef portrait" />
-                </Col>
-              ))}
-            </Slider>
-          </Col>
-        </Row>
+        <Slider {...settings}>
+          {chefs.map(chef => (
+            <Col className="p-0">
+              <ChefPortrait src={chef.imageUrl} alt="chef portrait" />
+            </Col>
+          ))}
+        </Slider>
       </Container>
     </>
   );
 };
 
 const ChefPortrait = styled.img`
-  max-width: 200px;
-  max-height: 200px;
+  width: 20vw;
+  height: 20vw;
 `;
 
 export default TeamBioSlider;
