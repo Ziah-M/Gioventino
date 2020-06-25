@@ -23,7 +23,44 @@ const ProductCard = props => {
           </ColCentered>
 
           <ColCentered xs={12}>
-            <StyledText>{text}</StyledText>
+            <StyledText>
+              <Row noGutters>
+                <Col xs={12} style={{ textAlign: "center" }}>
+                  {text
+                    .split(",")
+                    .map((word, index) =>
+                      index === 0 || index === 1 ? word + "," : null
+                    )}
+                </Col>
+              </Row>
+              <Row noGutters>
+                <Col xs={12} style={{ textAlign: "center" }}>
+                  {text
+                    .split(",")
+                    .map((word, index) =>
+                      index === 2 || index === 3 ? word + "," : null
+                    )}
+                </Col>
+              </Row>
+              <Row noGutters>
+                <Col xs={12} style={{ textAlign: "center" }}>
+                  {text
+                    .split(",")
+                    .map((word, index) =>
+                      index === 4 || index === 5 ? word + "," : null
+                    )}
+                </Col>
+              </Row>
+              <Row noGutters>
+                <Col xs={12} style={{ textAlign: "center" }}>
+                  {text
+                    .split(",")
+                    .map((word, index) =>
+                      index === 6 || index === 7 ? word + "," : null
+                    )}
+                </Col>
+              </Row>
+            </StyledText>
           </ColCentered>
 
           <ColCentered xs={12}>
@@ -78,11 +115,14 @@ const StyledSubtitle = styled(Card.Subtitle)`
   text-align: center;
   text-transform: uppercase;
   color: black;
+  font-size: 125%;
 `;
 
 const StyledText = styled(Card.Text)`
   color: black;
   padding: 5%;
+  font-size: 100%;
+  text-align: center;
 `;
 
 const StyledButton = styled(Button)`
@@ -90,10 +130,12 @@ const StyledButton = styled(Button)`
   color: black;
   padding: 2% 4%;
   margin: 0 0 5% 0;
+  font-size: 80%;
 
   &:hover {
     color: white !important;
     background-color: black;
+    border: 2px solid black !important;
     ${css`
       transition: 400ms ease-in-out background;
       transition: 400ms ease color;
