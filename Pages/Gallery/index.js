@@ -101,16 +101,16 @@ const Gallery = () => {
             <ProductCategorySelector categories={PRODUCT_CATEGORIES} />
           </Col>
         </Row>
-        <Row noGutters>
-          <CardGroup>
-            {DEFAULT_PRODUCTS.map(item => (
+        <Row>
+          {DEFAULT_PRODUCTS.map(item => (
+            <Col lg={3} md={4} sm={6} xs={12}>
               <GalleryCard
                 imageUrl={item.img}
-                heading={item.heading}
+                heading={item.headings}
                 subheading={item.subheading}
               />
-            ))}
-          </CardGroup>
+            </Col>
+          ))}
         </Row>
       </Container>
     </ThemedContainer>
