@@ -35,9 +35,10 @@ const StyledButton = styled.button`
   padding: 5px 15px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.2em;
-  min-width: 120px;
-  max-width: 120px;
+  font-size: 2.5vw;
+  min-width: 15vw;
+  width: 120px;
+  max-width: 17vw;
   border: none !important;
   outline: none !important;
 
