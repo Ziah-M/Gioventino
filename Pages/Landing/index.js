@@ -15,8 +15,8 @@ const Landing = () => {
 
 const Content = ({
   topHeading = "Welcome to",
-  middleHeading = "TASTE",
-  bottomHeading = "Sydney's best Pizza"
+  middleHeading = "Gioventino's",
+  bottomHeading = "Authentic Sydney Pizza"
 }) => {
   return (
     <Wrapper>
@@ -37,8 +37,13 @@ const Content = ({
             justifyContent: "center",
             marginBottom: "15px"
           }}
-        >
+        />
+      </Row>
+      <Row noGutters>
+        <Col xs={6}>
           <StyledButton>BOOK TABLE -></StyledButton>
+        </Col>
+        <Col xs={6}>
           <StyledButton>VIEW MENU -></StyledButton>
         </Col>
       </Row>
@@ -47,10 +52,12 @@ const Content = ({
 };
 
 const Wrapper = styled.div`
-  padding-top: 30vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  max-height: 100vh;
+  min-height: 100vh;
 `;
 
 //TODO
@@ -108,7 +115,8 @@ const BrandName = styled.h1`
 `;
 
 const StyledButton = styled(Button)`
-  margin: 20% 1%;
+  margin: 0 10px;
+  min-width: 150px;
 `;
 
 export default Landing;

@@ -13,29 +13,29 @@ const Testimonials = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-around",
           alignItems: "center",
           minHeight: "100vh"
         }}
       >
-          <Row>
-            <Col xs={12}>
-              <Heading
-                topHeading="What our customers have said"
-                bottomHeading="Testimonials"
-              />
-            </Col>
-          </Row>
+        <Row>
+          <Col xs={12}>
+            <Heading
+              topHeading="What our customers have said"
+              bottomHeading="Testimonials"
+            />
+          </Col>
+        </Row>
 
-          <Row>
-            <Col xs={6} className="d-flex justify-content-center">
-              <TestimonialCard />
-            </Col>
-            <Col xs={6} className="d-flex justify-content-center">
-              <TestimonialCard />
-            </Col>
-          </Row>
-        </Container>
+        <Row>
+          <Col xs={6} className="d-flex justify-content-center">
+            <TestimonialCard />
+          </Col>
+          <Col xs={6} className="d-flex justify-content-center">
+            <TestimonialCard />
+          </Col>
+        </Row>
+      </Container>
     </ThemedContainer>
   );
 };

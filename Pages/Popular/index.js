@@ -36,7 +36,7 @@ const Popular = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "space-around",
           alignItems: "center",
           minHeight: "100vh"
         }}

@@ -6,19 +6,12 @@ const DEFAULT_IMAGE =
   "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 
 const Portrait = ({ image = DEFAULT_IMAGE }) => (
-  <Container fluid>
-    <Row noGutters>
-      <Col xs={12} className="d-flex justify-content-center">
         <PortraitImage src={image} />
-      </Col>
-    </Row>
-  </Container>
 );
 
 const PortraitImage = styled.img`
-  height: 45vw;
-  width: 30vw;
-  margin-top: 3vw;
+ max-height:100%;
+ max-width:100%;
 `;
 
 export default Portrait;

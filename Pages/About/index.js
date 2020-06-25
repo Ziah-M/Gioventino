@@ -32,9 +32,10 @@ const About = () => {
   return (
     <ThemedContainer>
       <Container fluid style={{ minHeight: "100vh" }}>
-        <Row>
+        <Row nOGutters>
           <Col
-            md={7}
+            md={8}
+            lg={7}
             sm={12}
             style={{
               overflow: "hidden",
@@ -46,7 +47,10 @@ const About = () => {
           >
             <Row>
               <Col xs={12} className="d-flex justify-content-center">
-                <Heading topHeading="Our story" bottomHeading="About Taste" />
+                <Heading
+                  topHeading="Our story"
+                  bottomHeading="About Gioventino's"
+                />
               </Col>
             </Row>
 
@@ -80,7 +84,7 @@ const About = () => {
               </Col>
             </Row>
           </Col>
-          <Col className="d-none d-md-block" md={5}>
+          <Col className="d-none d-md-block p-0" md={4} lg={5}>
             <Img src={sideImage} />
           </Col>
         </Row>
@@ -90,7 +94,7 @@ const About = () => {
 };
 
 const Img = styled.img`
-  height: 100vh;
+  height: 100%;
   width: 100%;
 `;
 

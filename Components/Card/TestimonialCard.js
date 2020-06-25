@@ -10,17 +10,17 @@ const TEXT = `
 const DEFAULT_IMAGE =
   "https://pbs.twimg.com/profile_images/969073897189523456/rSuiu_Hr.jpg";
 
-const TestimonialCard = (props) => {
+const TestimonialCard = props => {
   const {
     name = "John Doe",
     position = "MD, doctor",
     text = TEXT,
-    imageUrl = DEFAULT_IMAGE,
+    imageUrl = DEFAULT_IMAGE
   } = props;
   return (
     <StyledCard>
+      <StyledCardImg src={imageUrl} />
       <StyledCardBody>
-        <StyledCardImg src={imageUrl} />
         <StyledText>{text}</StyledText>
         <StyledName>{name}</StyledName>
         <StyledPosition>{position}</StyledPosition>
@@ -74,12 +74,13 @@ const StyledCardBody = styled(Card.Body)`
 `;
 
 const StyledCardImg = styled(Card.Img)`
-  max-width: 20%;
   border-radius: 50%;
+  height: 75px;
+  width: 75px;
 
   /* Styles for positioning on card */
   position: absolute;
-  top: -13%;
+  top: -37px;
 `;
 
 export default TestimonialCard;

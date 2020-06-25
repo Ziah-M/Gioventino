@@ -27,13 +27,19 @@ const Offer = () => {
           </Col>
         </Row>
         <Row>
-          <Col style={{ padding: "0" }} md={4} className="d-none d-md-block">
-            <Img src="https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
+          <Col style={{ padding: "0" }} className="d-none d-sm-block">
+            <Img src="https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
           </Col>
-          <Col className="d-flex align-items-center" sm={12} md={4}>
+          <Col
+            className="d-flex align-items-center"
+            sm={8}
+            md={6}
+            lg={5}
+            xl={4}
+          >
             <SpecialCard />
           </Col>
-          <Col style={{ padding: "0" }} md={4} className="d-none d-md-block">
+          <Col style={{ padding: "0" }} className="d-none d-lg-block">
             <Img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
           </Col>
         </Row>

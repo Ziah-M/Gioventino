@@ -25,7 +25,7 @@ const StyledButton = styled(Button)`
           &:hover {
             background: ${props => props.theme.primaryAccent};
             color: black !important;
-            border: 2px solid ${props => props.theme.primaryAccent} !important;
+            border: 1px solid ${props => props.theme.primaryAccent} !important;
             background-color: ${props => props.theme.primaryAccent};
             ${css`
               transition: 400ms ease-in-out background;
