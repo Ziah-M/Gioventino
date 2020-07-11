@@ -4,6 +4,7 @@ import { ThemedContainer } from "../../Themes/DarkTheme";
 import Heading from "../../Components/Heading";
 import { Container, Row, Col } from "react-bootstrap";
 import ContactCard from "../../Components/Card/ContactCard";
+import Map from "./Map";
 
 const Contact = () => {
   return (
@@ -25,11 +26,11 @@ const Contact = () => {
           >
             <InnerContainer>
               <Row>
-                <Col onMouseDown={12} sm={6}>
+                <Col xs={12} sm={6}>
                   <ContactCard />
                 </Col>
                 <Col className="d-none d-md-block">
-                  Map component will go here
+                  <Map />
                 </Col>
               </Row>
             </InnerContainer>
@@ -43,7 +44,7 @@ const Contact = () => {
 // TODO -- OUTLINE
 const InnerContainer = styled(Container)`
   outline: 5px solid rgb(24, 25, 30);
-  margin: 10px;
+  padding: 20px;
 `;
 
 export default Contact;
