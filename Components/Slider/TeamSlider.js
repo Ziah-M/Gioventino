@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import { Col, Row, Container } from "react-bootstrap";
+import "./sliderOverride.css";
 
 const DEFAULT_CHEFS = [
   {
@@ -37,7 +38,7 @@ const TeamBioSlider = ({ chefs = DEFAULT_CHEFS }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 2,
-    arrows: false
+    arrows: true
   };
 
   return (
