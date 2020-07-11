@@ -19,14 +19,14 @@ const Contact = () => {
           minHeight: "100vh"
         }}
       >
-        <Row style={{ height: "100%" }}>
+        <Row style={{ height: "100%", width: "100vw" }}>
           <Col
             xs={12}
             className="d-flex justify-content-center align-items-center"
           >
-            <InnerContainer>
+            <InnerContainer fluid>
               <Row>
-                <Col xs={12} sm={6}>
+                <Col xs={12} sm={9} md={6}>
                   <ContactCard />
                 </Col>
                 <Col className="d-none d-md-block">
