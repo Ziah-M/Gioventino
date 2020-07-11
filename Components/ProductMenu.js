@@ -63,8 +63,10 @@ const ProduceItemHeading = styled.span`
 `;
 
 const StyledCardImg = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 75px;
+  height: 75px;
+  min-width: 12.5vw;
+  min-height: 12.5vw;
   border-radius: 50%;
 `;
 

@@ -8,7 +8,7 @@ import TeamBioSlider from "../../Components/Slider/TeamSlider";
 const Slider = () => {
   return (
     <Container fluid>
-      <Row>
+      <Row className="d-flex justify-content-center">
         <Col xs={6} className="d-flex justify-content-center">
           <TeamBioSlider />
         </Col>

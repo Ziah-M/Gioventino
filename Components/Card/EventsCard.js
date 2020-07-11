@@ -51,6 +51,8 @@ const StyledBorder = styled.div`
 const StyledCard = styled(Card)`
   background-color: ${bgColor};
   position: relative;
+  min-height: 450px;
+  border: none;
 `;
 
 const StyledCardBody = styled(Card.Body)`
@@ -60,7 +62,7 @@ const StyledCardBody = styled(Card.Body)`
   justify-items: center;
 
   /* To prevent overflowing the border */
-  padding: 10%; 
+  padding: 10%;
 `;
 
 const StyledCardImg = styled(Card.Img)`
@@ -86,17 +88,18 @@ const DateOverlay = styled.div`
   width: 30%;
   height: 20%;
   text-align: center;
-  top: -30%;
+  top: -120%;
   display: grid;
   justify-items: center;
   align-content: center;
+  padding: 6% 0;
 `;
 
 const DateSpan = styled.div`
-  outline: 1px solid black;
+  outline: 2px solid black;
   color: black;
   padding: 5px;
-  font-size: 0.5em;
+  font-size: 0.7em;
 `;
 
 export default EventsCard;

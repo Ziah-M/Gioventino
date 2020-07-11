@@ -12,6 +12,9 @@ const DarkOverlay = styled.div`
   padding: 0;
   z-index: 2;
 
+  /* Default padding that will be applied to all pages */
+  padding: 30px 0;
+
   ${props =>
     css`
       min-height: ${props.height};

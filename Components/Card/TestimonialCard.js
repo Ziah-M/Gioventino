@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import styled from "styled-components";
 
 const bgColor = "rgb(32,33,39)";
@@ -18,16 +18,22 @@ const TestimonialCard = props => {
     imageUrl = DEFAULT_IMAGE
   } = props;
   return (
-    <StyledCard>
-      <StyledCardImg src={imageUrl} />
-      <StyledCardBody>
-        <StyledText>{text}</StyledText>
-        <StyledName>{name}</StyledName>
-        <StyledPosition>{position}</StyledPosition>
-      </StyledCardBody>
-    </StyledCard>
+    <StyledContainer>
+      <StyledCard>
+        <StyledCardImg src={imageUrl} />
+        <StyledCardBody>
+          <StyledText>{text}</StyledText>
+          <StyledName>{name}</StyledName>
+          <StyledPosition>{position}</StyledPosition>
+        </StyledCardBody>
+      </StyledCard>
+    </StyledContainer>
   );
 };
+
+const StyledContainer = styled(Container)`
+  padding: 50px;
+`;
 
 // BOOTSTRAP STYLES
 const StyledText = styled(Card.Text)`
@@ -56,21 +62,22 @@ const StyledPosition = styled(Card.Text)`
 const StyledCard = styled(Card)`
   background-color: ${bgColor};
   padding: 20px;
+  /* padding plus width of StyledCardBody */
+  min-width: 240px;
 
   /* Styles for positioning IMG on card */
   position: relative;
-  display: grid;
-  justify-items: center;
-
   background-color: #202127;
   box-shadow: 0px 2px 48px 9px rgba(0, 0, 0, 0.43);
 `;
 
 const StyledCardBody = styled(Card.Body)`
   border: 2px solid #33343c;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #18191e;
+  min-width: 200px;
 `;
 
 const StyledCardImg = styled(Card.Img)`
@@ -81,6 +88,7 @@ const StyledCardImg = styled(Card.Img)`
   /* Styles for positioning on card */
   position: absolute;
   top: -37px;
+  left: 35%;
 `;
 
 export default TestimonialCard;
