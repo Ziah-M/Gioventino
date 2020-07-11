@@ -2,33 +2,37 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { CateringCard } from "../../Components/Card";
 import { ThemedContainer } from "../../Themes/ImgTheme";
+import CateringSlider from "../../Components/Slider/CateringSlider";
 
 // TODO --- HEADING GOES INSIDE THE CATERING CARD
 
 const Catering = () => {
   return (
-    <ThemedContainer bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-      <Container
-        fluid
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "100vh"
-        }}
-      >
-        <Row>
-          <Col
-            xs={12}
-            className="d-flex justify-content-center align-items-center"
-            style={{ height: "100vh" }}
-          >
+    <Container
+      fluid
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        padding: 0,
+        margin: 0
+      }}
+    >
+      <Row>
+        <Col
+          xs={12}
+          className="d-flex justify-content-center align-items-center"
+          style={{ height: "100vh", position: "relative" }}
+        >
+          <CateringSlider />
+          <Col lg={6} md={8} sm={10} xs={11}>
             <CateringCard />
           </Col>
-        </Row>
-      </Container>
-    </ThemedContainer>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
