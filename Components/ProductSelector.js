@@ -29,15 +29,14 @@ const StyledContainer = styled(Container)`
 
 const StyledButton = styled.button`
   background-color: rgba(255, 255, 255, 0.2);
-  margin: 0px 2px;
+  margin: 0px 0.25vw;
   color: white;
   border: none;
-  padding: 5px 15px;
+  padding: 0.75vw 2.25vw;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2.5vw;
+  font-size: 2vw;
   min-width: 15vw;
-  width: 120px;
   max-width: 17vw;
   border: none !important;
   outline: none !important;

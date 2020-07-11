@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { ThemedContainer } from "../../Themes/ImgTheme";
 import Heading from "../../Components/Heading";
-import { TestimonialCard } from "../../Components/Card";
 import { Container, Row, Col } from "react-bootstrap";
+import TestimonialSlider from "../../Components/Slider/TestimonialSlider";
 
 const Testimonials = () => {
   return (
@@ -28,11 +28,8 @@ const Testimonials = () => {
         </Row>
 
         <Row>
-          <Col xs={6} className="d-flex justify-content-center">
-            <TestimonialCard />
-          </Col>
-          <Col xs={6} className="d-flex justify-content-center">
-            <TestimonialCard />
+          <Col xs={12}>
+            <TestimonialSlider />
           </Col>
         </Row>
       </Container>
