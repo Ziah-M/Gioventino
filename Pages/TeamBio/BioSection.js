@@ -5,17 +5,17 @@ import Heading from "../../Components/Heading";
 import { Container, Row, Col } from "react-bootstrap";
 import SocialButtons from "../../Components/SocialButtons";
 
-const BioSection = () => {
+const BioSection = ({chef}) => {
   return (
     <Container fluid>
       <Row>
         <HeadingCol xs={12}>
-          <Name>John Dough</Name>
+          <Name>{chef.name}</Name>
         </HeadingCol>
       </Row>
       <Row>
         <SubheadingCol xs={12}>
-          <Position>Head Chef</Position>
+          <Position>{chef.position}</Position>
         </SubheadingCol>
       </Row>
       <Row>

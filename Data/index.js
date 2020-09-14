@@ -1,6 +1,6 @@
 const { faPizzaSlice } = require("@fortawesome/free-solid-svg-icons");
 
-const products = [
+const PRODUCTS = [
   {
     name: "Italian Pizza",
     price: 20,
@@ -77,8 +77,43 @@ const products = [
   },
 ];
 
-const ProductCategories = ["Breakfast", "Lunch", "Dinner", "Snacks", "Desert"];
+const PRODUCT_CATEGORIES = ["Breakfast", "Lunch", "Dinner", "Snacks", "Desert"];
 
-export const getProducts = () => products;
+const CHEFS = [
+  {
+    name: "Chef John",
+    position: "Head Chef",
+    imgUrl: "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  },
+  {
+    name: "Chef Alex",
+    position: "Line Cook",
+    imgUrl: "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  },
+  {
+    name: "Chef Andrei",
+    position: "Line Cook",
+    imgUrl: "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
+    {
+      name: "Chef John",
+      position: "Head Chef",
+      imgUrl: "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    },
+    {
+      name: "Chef Alex",
+      position: "Line Cook",
+      imgUrl: "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    },
+    {
+      name: "Chef Andrei",
+      position: "Line Cook",
+      imgUrl: "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+];
 
-export const getProductCategories = () => ProductCategories;
+export const getProducts = () => PRODUCTS;
+
+export const getProductCategories = () => PRODUCT_CATEGORIES;
+
+export const getChefs = () => CHEFS;

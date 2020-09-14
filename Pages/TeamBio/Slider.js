@@ -5,12 +5,12 @@ import Heading from "../../Components/Heading";
 import { Container, Row, Col } from "react-bootstrap";
 import TeamBioSlider from "../../Components/Slider/TeamSlider";
 
-const Slider = () => {
+const Slider = ({setSelectedChef=f=>f}) => {
   return (
     <Container fluid>
       <Row className="d-flex justify-content-center">
         <Col xs={6} className="d-flex justify-content-center">
-          <TeamBioSlider />
+          <TeamBioSlider setSelectedChef={setSelectedChef}/>
         </Col>
       </Row>
     </Container>

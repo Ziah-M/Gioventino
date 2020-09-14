@@ -3,35 +3,11 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { Col, Row, Container } from "react-bootstrap";
 import "./sliderOverride.css";
+import {getChefs} from '../../Data'
 
-const DEFAULT_CHEFS = [
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-  },
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    imageUrl:
-      "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-  }
-];
 
-const TeamBioSlider = ({ chefs = DEFAULT_CHEFS }) => {
+
+const TeamBioSlider = ({ chefs = getChefs(), setSelectedChef=f=>f }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -47,7 +23,7 @@ const TeamBioSlider = ({ chefs = DEFAULT_CHEFS }) => {
         <Slider {...settings}>
           {chefs.map(chef => (
             <Col className="p-0">
-              <ChefPortrait src={chef.imageUrl} alt="chef portrait" />
+              <ChefPortrait src={chef.imgUrl} alt="chef portrait" onClick={() => setSelectedChef(chef)}/>
             </Col>
           ))}
         </Slider>
