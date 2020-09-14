@@ -7,7 +7,7 @@ const TasteNavbar = () => {
   return (
     <Navbar
       style={{
-        background: "rgba(0,0,0,0.9)",
+        background: "rgba(0,0,0,0.6)",
         color: "white",
         position: "sticky",
         top: "0",
@@ -93,14 +93,16 @@ const TasteNavbar = () => {
 const Link = styled(UnstyledLink)`
   color: white;
   margin: 0 auto;
+  padding: 5px 15px;
+
   &:hover {
     color: green !important;
     cursor: pointer !important;
   }
 
   &.active {
-    background-color: blue !important;
-    color: red !important;
+    background-color: slategrey !important;
+    color: blue !important;
   }
 `;
 

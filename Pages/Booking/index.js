@@ -9,6 +9,7 @@ const Booking = () => {
   return (
     <ThemedContainer>
       <Container
+        id="reservations"
         fluid
         style={{
           display: "flex",

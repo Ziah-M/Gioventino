@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
-import Heading from "../../Components/Heading";
+import Heading from "../Heading";
 import Button from "../Buttons/StyledButton";
 
 const bgColor = "rgb(32,33,39)";

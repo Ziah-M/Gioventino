@@ -10,6 +10,7 @@ const Contact = () => {
   return (
     <ThemedContainer>
       <Container
+        id="contact"
         fluid
         style={{
           display: "flex",

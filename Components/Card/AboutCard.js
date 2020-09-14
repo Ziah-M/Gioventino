@@ -42,22 +42,25 @@ text-align:center;
 const StyledCard = styled(Card)`
   min-width: 150px;
   min-height: 200px;
+  width:180px;
+  height:180px;
   position: relative;
   border: none !important;
 `;
 
 const StyledCardBodyUpper = styled(Card.Body)`
-  display: grid;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${bgColorUpper};
   color: white;
 `;
 
 const StyledCardBodyLower = styled(Card.Body)`
-  display: grid;
-  justify-items: center;
-  align-content: center;
+  display: flex;
+  max-height:40%;
+  justify-content: center;
+  align-items: center;
   color: black;
   background-color: ${bgColor};
 

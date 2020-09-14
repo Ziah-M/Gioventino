@@ -31,7 +31,7 @@ const sideImage =
 const About = () => {
   return (
     <ThemedContainer>
-      <Container fluid style={{ minHeight: "100vh" }}>
+      <Container id="about" fluid style={{ minHeight: "100vh" }}>
         <Row nOGutters>
           <Col
             md={8}

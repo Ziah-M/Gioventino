@@ -38,6 +38,7 @@ const SpecialCard = props => {
             <b>ORDER NOW -></b>
           </Button>
         </Row>
+        <VectorArt src="https://cdn.pixabay.com/photo/2012/04/13/10/52/pizza-31799_960_720.png" />
       </StyledCardBody>
     </StyledCard>
   );
@@ -45,15 +46,24 @@ const SpecialCard = props => {
 
 // BOOTSTRAP STYLES
 
+const VectorArt = styled.img`
+  position: absolute;
+  opacity: 0.3;
+  left: 7%;
+  bottom: 7%;
+  width: 75px;
+  height: 75px;
+`;
+
 const Col = styled(UnstyledCol)`
-display:flex;
-justify-content:center;
-align-items:center;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Row = styled(UnstyledRow)`
-  margin:20px;
-`
+  margin: 20px;
+`;
 
 const StyledText = styled(Card.Text)`
   color: #a19fa0;

@@ -16,6 +16,7 @@ const Menu = () => {
   return (
     <ThemedContainer>
       <Container
+        id="menu"
         fluid
         style={{
           display: "flex",

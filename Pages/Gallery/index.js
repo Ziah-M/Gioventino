@@ -75,6 +75,7 @@ const Gallery = () => {
   return (
     <ThemedContainer>
       <Container
+        id="gallery"
         fluid
         style={{
           display: "flex",

@@ -10,6 +10,7 @@ const Offer = () => {
     <ThemedContainer bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
       <Container
         fluid
+        id="offer"
         style={{
           display: "flex",
           flexDirection: "column",

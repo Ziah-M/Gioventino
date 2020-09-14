@@ -1,145 +1,101 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import Button from "../Buttons/StyledButton";
-import { Row, Col, Container, Card } from "react-bootstrap";
+import UnstyledButton from "../Buttons/StyledButton";
+import { Row, Col, Container, Card as BootstrapCard } from "react-bootstrap";
+import AbstractCard from "./AbstractCard";
 
-const ProductCard = props => {
+const ProductCard = (props) => {
   const { imageUrl, title = "ITALIAN PIZZA", text, price } = props;
   return (
-    <StyledCard>
+    <Card className="border-black">
       <StyledCardImg src={imageUrl} />
-      <StyledCardBody>
-        <PriceOverlay>
-          <b>{price}</b>
-        </PriceOverlay>
-
-        <InnerContainer fluid>
-          <Row noGutters>
-            <ColCentered xs={12}>
-              <StyledSubtitle>
-                {title}
-                <br />
-                ~~~~~~~
-              </StyledSubtitle>
-            </ColCentered>
-          </Row>
-
-          <Row>
-            <ColCentered xs={12}>
-              <StyledText>
-                <Row noGutters>
-                  <Col xs={12} style={{ textAlign: "center" }}>
-                    {text
-                      .split(",")
-                      .map((word, index) =>
-                        index === 0 || index === 1 ? word + "," : null
-                      )}
-                  </Col>
-                </Row>
-                <Row noGutters>
-                  <Col xs={12} style={{ textAlign: "center" }}>
-                    {text
-                      .split(",")
-                      .map((word, index) =>
-                        index === 2 || index === 3 ? word + "," : null
-                      )}
-                  </Col>
-                </Row>
-                <Row noGutters>
-                  <Col xs={12} style={{ textAlign: "center" }}>
-                    {text
-                      .split(",")
-                      .map((word, index) =>
-                        index === 4 || index === 5 ? word + "," : null
-                      )}
-                  </Col>
-                </Row>
-                <Row noGutters>
-                  <Col xs={12} style={{ textAlign: "center" }}>
-                    {text
-                      .split(",")
-                      .map((word, index) =>
-                        index === 6 || index === 7 ? word + "," : null
-                      )}
-                  </Col>
-                </Row>
-              </StyledText>
-            </ColCentered>
-          </Row>
-
-          <Row>
-            <ColCentered xs={12}>
-              <StyledButton>
-                <b>ORDER NOW -></b>
-              </StyledButton>
-            </ColCentered>
-          </Row>
-        </InnerContainer>
-      </StyledCardBody>
-      <StyledBorder />
-    </StyledCard>
+      <Inner>
+        <Price>{price}</Price>
+        <Text-Area>
+          <Subtitle>
+            {title}
+            <br />
+            ~~~~~~
+          </Subtitle>
+          <Text>{text}</Text>
+          <Wrap>
+            <Button>Order Now -></Button>
+          </Wrap>
+        </Text-Area>
+      </Inner>
+    </Card>
   );
 };
 
-const InnerContainer = styled(Container)`
+const Card = styled(AbstractCard)`
+  height: 400px;
+  width: 225px;
+  margin: 30px;
+`;
+
+const Inner = styled.div`
+  width: 100%;
+  height: 55%;
+  max-height: 55%;
+  background: #deb150;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px 0;
-  height: 100%;
-`;
-
-// THIS ELEMENT IS PURELY STYLISTIC
-const StyledBorder = styled.div`
-  position: absolute;
-  top: 4%;
-  left: 4%;
-  height: 92%;
-  width: 92%;
-  border: 2px solid #303035;
-`;
-
-const ColCentered = styled(Col)`
-  display: flex;
+  align-items: center;
   justify-content: center;
 `;
 
-// BOOTSTRAP STYLES
-const StyledCard = styled(Card)`
-  background-color: ${props => props.theme.primaryAccent};
-  border: none !important;
-  width: 30vw;
+const StyledCardImg = styled.img`
+  height: 45%;
+  width: 100%;
+  object-fit: cover;
 `;
 
-const StyledCardBody = styled(Card.Body)`
+const Price = styled.div`
+  width: 40px;
+  height: 30px;
+  font-size: 18px;
+  position: absolute;
+  background: black;
+  opacity: 0.8;
+  color: white;
+  text-align: center;
+  vertical-align: center;
+
+  z-index: 3;
+
+  //center
+  top: -15px; // should be half of height
+  left: 50%;
+  transform: translate(-50%);
+`;
+
+const TextArea = styled.div`
+  padding: 5%;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
   justify-content: center;
   align-items: center;
 `;
 
-const StyledCardImg = styled(Card.Img)`
-  width: 30vw;
-  height: 25vw;
-`;
-
-const StyledSubtitle = styled(Card.Subtitle)`
+const Subtitle = styled(BootstrapCard.Subtitle)`
   text-align: center;
   text-transform: uppercase;
   color: black;
   font-size: 125%;
 `;
 
-const StyledText = styled(Card.Text)`
+const Text = styled(BootstrapCard.Text)`
   color: black;
   padding: 5%;
   font-size: 100%;
   text-align: center;
 `;
 
-const StyledButton = styled(Button)`
+const Button = styled(UnstyledButton)`
   border: 2px solid black;
   color: black;
   padding: 2% 4%;
@@ -147,32 +103,24 @@ const StyledButton = styled(Button)`
   width: 120px;
   min-width: 60%;
   min-height: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  transition: 400ms ease-in-out background color;
 
   &:hover {
     color: white !important;
     background-color: black;
     border: 2px solid black !important;
-    ${css`
-      transition: 400ms ease-in-out background;
-      transition: 400ms ease color;
-    `}
   }
 `;
 
-const PriceOverlay = styled.div`
-  position: absolute;
-  color: white;
-  background-color: black;
-  min-width: 50px;
-  width: 10%;
-  height: 5%;
-  min-height: 25px;
-  text-align: center;
-  top: -6%;
-  display: flex;
+const Wrap = styled.div`
+width:100%;
+display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
-`;
+`
 
 export default ProductCard;

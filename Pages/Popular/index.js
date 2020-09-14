@@ -3,6 +3,7 @@ import { ProductCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/ImgTheme";
 import { Container, Row, Col, CardDeck } from "react-bootstrap";
+import styled from "styled-components";
 
 const DEFAULT_PRODUCTS = [
   {

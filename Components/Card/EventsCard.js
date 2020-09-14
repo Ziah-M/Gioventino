@@ -15,7 +15,8 @@ const EventsCard = props => {
     imageUrl = "https://images.pexels.com/photos/16408/pexels-photo.jpg?cs=srgb&dl=bar-drinks-party-champagne-16408.jpg&fm=jpg",
     title = "WINE TASTING",
     text = "Lorem ipsum placeholder text",
-    price = "April 9"
+    month = "April",
+    date = "9"
   } = props;
   return (
     <StyledCard>
@@ -23,7 +24,11 @@ const EventsCard = props => {
       <StyledCardBody>
         <DateOverlay>
           <DateSpan>
-            <b>{price}</b>
+            <b>
+              {month}
+              <br />
+              {date}
+            </b>
           </DateSpan>
         </DateOverlay>
         <StyledSubtitle>{title}</StyledSubtitle>
@@ -85,10 +90,11 @@ const DateOverlay = styled.div`
   position: absolute;
   color: white;
   background-color: ${props => props.theme.primaryAccent};
-  width: 30%;
-  height: 20%;
+  width: 55px;
+  height: 55px;
+  height: 30%;
   text-align: center;
-  top: -120%;
+  top: -125%;
   display: grid;
   justify-items: center;
   align-content: center;
@@ -96,6 +102,8 @@ const DateOverlay = styled.div`
 `;
 
 const DateSpan = styled.div`
+  height: 40px;
+  width: 40px;
   outline: 2px solid black;
   color: black;
   padding: 5px;

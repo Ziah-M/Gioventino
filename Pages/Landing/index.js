@@ -1,25 +1,34 @@
 import React from "react";
 import styled from "styled-components";
-import { ThemedContainer } from "../../Themes/ImgTheme";
+import { ThemedContainer } from "../../Themes/AnimatedImgTheme";
 
 import Button from "../../Components/Buttons/StyledButton";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Landing = () => {
   return (
-    <ThemedContainer bgImg="https://images.pexels.com/photos/1082343/pexels-photo-1082343.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
-      <Content />
-    </ThemedContainer>
+    <Box>
+      <ThemedContainer
+        bgImg="https://images.pexels.com/photos/1082343/pexels-photo-1082343.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        height="calc(100vh + 50px)"
+        style={{
+          position: "absolute",
+          top:-50,
+        }}
+      >
+        <Content />
+      </ThemedContainer>
+    </Box>
   );
 };
 
 const Content = ({
   topHeading = "Welcome to",
   middleHeading = "Gioventino's",
-  bottomHeading = "Authentic Sydney Pizza"
+  bottomHeading = "Authentic Sydney Pizza",
 }) => {
   return (
-    <Wrapper>
+    <Wrapper id="top">
       <Row>
         <Col xs={12}>
           <Heading>{topHeading}</Heading>
@@ -35,7 +44,7 @@ const Content = ({
           style={{
             display: "flex",
             justifyContent: "center",
-            marginBottom: "15px"
+            marginBottom: "15px",
           }}
         />
       </Row>
@@ -50,6 +59,11 @@ const Content = ({
     </Wrapper>
   );
 };
+
+const Box = styled.div`
+  height: 100vh;
+  position:relative;
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -94,7 +108,7 @@ const Heading = styled.h2`
   font-size: 60px;
   font-weight: normal;
   line-height: 1;
-  color: ${props => props.theme.primaryAccent};
+  color: ${(props) => props.theme.primaryAccent};
   margin: 0 0 0 0;
   padding: 0;
 `;
