@@ -1,53 +1,33 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemedContainer } from "../../Themes/DarkTheme";
 import HeadingSection from "./HeadingSection";
 import Slider from "./Slider";
 import BioSection from "./BioSection";
 import Portrait from "./Portrait";
-import {getChefs} from '../../Data'
+import { getChefs } from "../../Data";
+import styled from "styled-components";
 
 const TeamBio = () => {
-  const [chef, setChef] = useState(getChefs()[0])
+  const [chef, setChef] = useState(getChefs()[0]);
   return (
     <ThemedContainer>
-      <Container
-        fluid
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "100vh"
-        }}
-      >
-        <Row>
-          <HeadingSection />
-        </Row>
-
-        <Row className="d-flex justify-content-center mt-3">
-          <Col xs={12}>
-            <Slider setSelectedChef={setChef}/>
-          </Col>
-        </Row>
-
-        <Row
-          noGutters
-          className="d-flex justify-content-center align-items-center"
-        >
-          <Col
-            xs={6}
-            className="d-flex flex-column justify-content-center align-items-center"
-          >
-            <Portrait image={chef.imgUrl}/>
-          </Col>
-          <Col xs={6} className="d-flex flex-column justify-content-center">
-            <BioSection chef={chef}/>
-          </Col>
-        </Row>
-      </Container>
+      <Wrapper>
+        <HeadingSection />
+        <Slider setSelectedChef={setChef} />
+        <BioSection chef={chef} />
+      </Wrapper>
     </ThemedContainer>
   );
 };
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+  padding:0 10vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+`;
 
 export default TeamBio;
