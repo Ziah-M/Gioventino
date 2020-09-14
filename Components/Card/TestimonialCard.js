@@ -1,8 +1,7 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styled from "styled-components";
 
-const bgColor = "rgb(32,33,39)";
 const TEXT = `
   Taste was the best pizza I've ever eaten!
 `;
@@ -10,29 +9,44 @@ const TEXT = `
 const DEFAULT_IMAGE =
   "https://pbs.twimg.com/profile_images/969073897189523456/rSuiu_Hr.jpg";
 
-const TestimonialCard = props => {
+const TestimonialCard = (props) => {
   const {
     name = "John Doe",
     position = "MD, doctor",
     text = TEXT,
-    imageUrl = DEFAULT_IMAGE
+    imageUrl = DEFAULT_IMAGE,
   } = props;
   return (
-    <StyledContainer>
-      <StyledCard>
-        <StyledCardImg src={imageUrl} />
-        <StyledCardBody>
+    <Wrapper>
+      <Outer>
+        <Inner>
+          <Row>
+            <Image src={imageUrl} />
+            <Col>
+              <StyledName>{name}</StyledName>
+              <StyledPosition>{position}</StyledPosition>
+            </Col>
+          </Row>
           <StyledText>{text}</StyledText>
-          <StyledName>{name}</StyledName>
-          <StyledPosition>{position}</StyledPosition>
-        </StyledCardBody>
-      </StyledCard>
-    </StyledContainer>
+        </Inner>
+      </Outer>
+    </Wrapper>
   );
 };
 
-const StyledContainer = styled(Container)`
-  padding: 50px;
+const Wrapper = styled.div`
+  width: 300px;
+  height: 300px;
+`;
+
+const Col = styled.div``;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 `;
 
 // BOOTSTRAP STYLES
@@ -59,36 +73,30 @@ const StyledPosition = styled(Card.Text)`
   margin-bottom: 30px;
 `;
 
-const StyledCard = styled(Card)`
-  background-color: ${bgColor};
-  padding: 20px;
-  /* padding plus width of StyledCardBody */
-  min-width: 240px;
+const Image = styled.img`
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+`;
 
-  /* Styles for positioning IMG on card */
-  position: relative;
+const Outer = styled.div`
+  width: inherit;
+  height: inherit;
   background-color: #202127;
   box-shadow: 0px 2px 48px 9px rgba(0, 0, 0, 0.43);
 `;
 
-const StyledCardBody = styled(Card.Body)`
+const Inner = styled.div`
+  width: inherit;
+  height: inherit;
+  transform: scale(0.9);
+  background-color: #18191e;
   border: 2px solid #33343c;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #18191e;
-  min-width: 200px;
-`;
-
-const StyledCardImg = styled(Card.Img)`
-  border-radius: 50%;
-  height: 75px;
-  width: 75px;
-
-  /* Styles for positioning on card */
-  position: absolute;
-  top: -37px;
-  left: 35%;
+  align-items: center;
+  justify-content: space-evenly;
 `;
 
 export default TestimonialCard;

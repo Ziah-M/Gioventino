@@ -2,7 +2,6 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import styled from "styled-components";
 
-
 const bgColor = "#deb150";
 const bgColorUpper = "#202127";
 const bgColorHover = "#18191E";
@@ -15,7 +14,9 @@ const AboutCard = ({ text = "PLACEHOLDER", children }) => {
         <StyledCardIcon>{children}</StyledCardIcon>
       </StyledCardBodyUpper>
       <StyledCardBodyLower>
-        <StyledText><b>{text}</b></StyledText>
+        <StyledText>
+          <b>{text}</b>
+        </StyledText>
       </StyledCardBodyLower>
       <StyledBorder />
     </StyledCard>
@@ -34,16 +35,16 @@ const StyledBorder = styled.div`
 `;
 
 const StyledCardIcon = styled(Card.Text)`
-font-size:2.0em;
-text-align:center;
+  font-size: 2em;
+  text-align: center;
 `;
 
 // BOOTSTRAP STYLES
 const StyledCard = styled(Card)`
   min-width: 150px;
   min-height: 200px;
-  width:180px;
-  height:180px;
+  width: 180px;
+  height: 180px;
   position: relative;
   border: none !important;
 `;
@@ -58,7 +59,7 @@ const StyledCardBodyUpper = styled(Card.Body)`
 
 const StyledCardBodyLower = styled(Card.Body)`
   display: flex;
-  max-height:40%;
+  max-height: 40%;
   justify-content: center;
   align-items: center;
   color: black;
@@ -71,9 +72,9 @@ const StyledCardBodyLower = styled(Card.Body)`
 `;
 
 const StyledText = styled(Card.Text)`
-font-size:1.0em;
-text-align:center;
-text-transform:uppercase;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
 `;
 
 export default AboutCard;

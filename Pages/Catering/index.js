@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { CateringCard } from "../../Components/Card";
-import { ThemedContainer } from "../../Themes/ImgTheme";
 import CateringSlider from "../../Components/Slider/CateringSlider";
 
 // TODO --- HEADING GOES INSIDE THE CATERING CARD
@@ -17,7 +16,7 @@ const Catering = () => {
         alignItems: "center",
         minHeight: "100vh",
         padding: 0,
-        margin: 0
+        margin: 0,
       }}
     >
       <Row>

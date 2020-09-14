@@ -1,7 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import Slider from "react-slick";
-import styled from "styled-components";
-import { Col, Row, Container } from "react-bootstrap";
 import TestimonialCard from "../Card/TestimonialCard";
 import "./sliderOverride.css";
 
@@ -16,7 +15,8 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
   };
 
   return (

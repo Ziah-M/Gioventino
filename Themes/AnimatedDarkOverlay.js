@@ -1,6 +1,4 @@
-import React from "react";
-import styled, { css,keyframes } from "styled-components";
-import {Tween} from 'react-gsap'
+import styled, { css, keyframes } from "styled-components";
 
 //Animation for making the overlay pulse for the cover page
 const pulse=keyframes`

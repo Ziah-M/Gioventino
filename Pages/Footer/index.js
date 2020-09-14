@@ -1,17 +1,15 @@
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import {
+  Col,
+
+  FormControl, InputGroup as UnstyledInputGroup, Row as UnstyledRow
+} from "react-bootstrap";
 import styled from "styled-components";
 import Heading from "../../Components/Heading";
-import { ThemedContainer } from "../../Themes/ImgTheme";
-import {
-  Container,
-  Row as UnstyledRow,
-  Col,
-  InputGroup as UnstyledInputGroup,
-  FormControl
-} from "react-bootstrap";
 import SocialButtons from "../../Components/SocialButtons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { ThemedContainer } from "../../Themes/ImgTheme";
 
 const Footer = () => {
   return (
@@ -22,7 +20,7 @@ const Footer = () => {
       <UnstyledRow
         style={{
           height: "75vh",
-          padding: "15vh 0"
+          padding: "15vh 0",
         }}
       >
         <Col
@@ -110,7 +108,7 @@ const Row = styled(UnstyledRow)``;
 
 const Text = styled.p`
   text-align: center;
-  color: ${props => props.theme.darkText};
+  color: ${(props) => props.theme.darkText};
 `;
 
 const Copywrite = styled.p`

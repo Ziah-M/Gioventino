@@ -13,12 +13,12 @@ const bgColor = "${props => props.theme.primaryAccent}";
 
 // TODO -- implementing transition (ease) with styled components
 
-const GalleryCard = props => {
+const GalleryCard = (props) => {
   const [show, setShow] = useState(false);
   const {
     imageUrl = "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     heading = "Burrito",
-    subheading = "Lunch"
+    subheading = "Lunch",
   } = props;
   return (
     <StyledContainer
@@ -47,10 +47,11 @@ const StyledContainer = styled(Container)`
   height: ${WIDTH_AND_HEIGHT};
   width: ${WIDTH_AND_HEIGHT};
   padding: 0px;
+  user-select: none;
 
   background-size: cover;
 
-  ${props =>
+  ${(props) =>
     css`
       background-image: url(${props.imageUrl});
     `}
@@ -61,6 +62,7 @@ const StyledTitle = styled(Card.Title)`
   margin: 0;
   font-size: 2em;
   text-align: center;
+  user-select: none;
 `;
 
 const PseudoButton = styled.div`
@@ -74,6 +76,7 @@ const PseudoButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 `;
 
 // BOOTSTRAP STYLES
@@ -86,8 +89,9 @@ const StyledCard = styled(Card)`
   margin: 0px;
   transition: 400ms ease;
   transition-property: display;
+  user-select: none;
 
-  ${props =>
+  ${(props) =>
     props.show &&
     css`
       display: block;
@@ -99,11 +103,12 @@ const StyledCardBody = styled(Card.Body)`
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  outline: 10px solid ${props => props.theme.primaryAccent};
+  outline: 10px solid ${(props) => props.theme.primaryAccent};
   position: relative;
   z-index: 1;
   justify-items: center;
   align-items: center;
+  user-select: none;
 `;
 
 const StyledSubtitle = styled(Card.Subtitle)`
@@ -112,6 +117,7 @@ const StyledSubtitle = styled(Card.Subtitle)`
   text-transform: uppercase;
   margin: 0;
   color: white;
+  user-select: none;
 `;
 
 export default GalleryCard;

@@ -1,9 +1,8 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { ThemedContainer } from "../../Themes/DarkTheme";
-import Heading from "../../Components/Heading";
-import { Container, Row, Col } from "react-bootstrap";
 import ContactCard from "../../Components/Card/ContactCard";
+import { ThemedContainer } from "../../Themes/DarkTheme";
 import Map from "./Map";
 
 const Contact = () => {
@@ -17,7 +16,7 @@ const Contact = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <Row style={{ height: "100%", width: "100vw" }}>

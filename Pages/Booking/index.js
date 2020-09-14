@@ -16,7 +16,7 @@ const Booking = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <Row>
@@ -86,28 +86,28 @@ const Control = styled(Form.Control)`
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
-  color: ${props => props.theme.lightText};
-  border-bottom: 2px solid ${props => props.theme.lightText} !important;
+  color: ${(props) => props.theme.lightText};
+  border-bottom: 2px solid ${(props) => props.theme.lightText} !important;
   margin: 0 5px 5px 0;
 `;
 
 const StyledInnerContainer = styled(Container)`
-  background: ${props => props.theme.primaryAccent};
+  background: ${(props) => props.theme.primaryAccent};
 `;
 
 const StyledCard = styled(Card)`
   padding: 10px;
-  background: ${props => props.theme.primaryAccent};
+  background: ${(props) => props.theme.primaryAccent};
 `;
 
 const StyledCardBody = styled(Card.Body)`
-  border: 2px solid ${props => props.theme.darkText};
+  border: 2px solid ${(props) => props.theme.darkText};
 `;
 
 const StyledForm = styled(Form)`
-  background: ${props => props.theme.primaryAccent};
+  background: ${(props) => props.theme.primaryAccent};
   padding: 25px 0px;
-  border-bottom: 2px solid ${props => props.theme.lightText};
+  border-bottom: 2px solid ${(props) => props.theme.lightText};
 `;
 
 const OpeningHours = styled.div`

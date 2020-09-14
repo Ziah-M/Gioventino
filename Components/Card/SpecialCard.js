@@ -1,17 +1,17 @@
 import React from "react";
-import { Card, Row as UnstyledRow, Col as UnstyledCol } from "react-bootstrap";
-import styled, { css } from "styled-components";
+import { Card, Col as UnstyledCol, Row as UnstyledRow } from "react-bootstrap";
+import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
 
 const bgColor = "rgb(32,33,39)";
 
-const SpecialCard = props => {
+const SpecialCard = (props) => {
   const {
     title = "ITALIAN PIZZA",
     text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy.",
     oldPrice = "$40",
     newPrice = "$20",
-    discount = "20%"
+    discount = "20%",
   } = props;
   return (
     <StyledCard>
@@ -110,7 +110,7 @@ const StyledCardBody = styled(Card.Body)`
 
 const Discount = styled.div`
   color: black;
-  background: ${props => props.theme.primaryAccent};
+  background: ${(props) => props.theme.primaryAccent};
   height: 30px;
   width: 90px;
   display: flex;
@@ -139,7 +139,7 @@ const OldPrice = styled.div`
 
 const DiscountPrice = styled.div`
   float: right;
-  color: ${props => props.theme.primaryAccent};
+  color: ${(props) => props.theme.primaryAccent};
   font-size: 30px;
   font-weight: 400;
   padding: 10px 0 20px 0;

@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
-import { Link as UnstyledLink, animateScroll as scroll } from "react-scroll";
 
 const TasteNavbar = () => {
   return (
@@ -12,7 +12,7 @@ const TasteNavbar = () => {
         position: "sticky",
         top: "0",
         left: "0",
-        zIndex: "9000"
+        zIndex: "9000",
       }}
     >
       <Navbar.Brand />

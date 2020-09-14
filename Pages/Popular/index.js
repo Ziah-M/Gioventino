@@ -1,9 +1,8 @@
 import React from "react";
+import { CardDeck, Col, Container, Row } from "react-bootstrap";
 import { ProductCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/ImgTheme";
-import { Container, Row, Col, CardDeck } from "react-bootstrap";
-import styled from "styled-components";
 
 const DEFAULT_PRODUCTS = [
   {
@@ -11,22 +10,22 @@ const DEFAULT_PRODUCTS = [
     ingredients: "Tomato, Milk, Pizza, Pepperoni, Basil, Olives",
     price: "$20",
     imageUrl:
-      "https://images.pexels.com/photos/263041/pexels-photo-263041.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+      "https://images.pexels.com/photos/263041/pexels-photo-263041.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     title: "PEPPERONI PIZZA",
     ingredients: "Pepperoni, Cheese, Sauce, Pizza, Oregano",
     price: "$15",
     imageUrl:
-      "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+      "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     title: "SUPREME PIZZA",
     ingredients: "Onion, Jalapenos, Pizza Sauce, Tomatoes, Cheese",
     price: "$20",
     imageUrl:
-      "https://images.pexels.com/photos/3053082/pexels-photo-3053082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-  }
+      "https://images.pexels.com/photos/3053082/pexels-photo-3053082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
 ];
 
 const Popular = () => {
@@ -39,7 +38,7 @@ const Popular = () => {
           flexDirection: "column",
           justifyContent: "space-around",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <Row>

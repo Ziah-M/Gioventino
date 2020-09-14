@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import { Col, Container } from "react-bootstrap";
 import Slider from "react-slick";
 import styled from "styled-components";
-import { Col, Row, Container } from "react-bootstrap";
+import { getChefs } from "../../Data";
 import "./sliderOverride.css";
-import {getChefs} from '../../Data'
 
 const settings = {
   dots: false,
@@ -11,27 +11,29 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 2,
-  arrows: true
+  arrows: true,
 };
 
-const TeamBioSlider = ({ chefs = getChefs(), setSelectedChef=f=>f }) => {
+const TeamBioSlider = ({ chefs = getChefs(), setSelectedChef = (f) => f }) => {
+  const [currentChef, setCurrentChef] = useState(getChefs()[0]);
 
-
-const [currentChef, setCurrentChef] = useState(getChefs()[0])
-
-const handleClick = (chef) => {
-  setCurrentChef(chef);
-  setSelectedChef(chef);
-}
-
+  const handleClick = (chef) => {
+    setCurrentChef(chef);
+    setSelectedChef(chef);
+  };
 
   return (
     <>
       <Container fluid className="p-0" style={{ width: "60vw" }}>
         <Slider {...settings}>
-          {chefs.map(chef => (
+          {chefs.map((chef) => (
             <Col className="p-0">
-              <ChefPortrait src={chef.imgUrl} alt="chef portrait" onClick={() => handleClick(chef)} className={(chef.name===currentChef.name) && 'active' }/>
+              <ChefPortrait
+                src={chef.imgUrl}
+                alt="chef portrait"
+                onClick={() => handleClick(chef)}
+                className={chef.name === currentChef.name && "active"}
+              />
             </Col>
           ))}
         </Slider>
@@ -44,8 +46,8 @@ const ChefPortrait = styled.img`
   width: 20vw;
   height: 20vw;
 
-  &.active{
-    outline:2px solid green;
+  &.active {
+    outline: 2px solid green;
   }
 `;
 

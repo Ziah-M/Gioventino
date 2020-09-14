@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Container } from "react-bootstrap";
+import styled from "styled-components";
 
 //TODO --- Find a better flourish for under header
 
@@ -12,7 +12,7 @@ const H2 = styled.h2`
   font-size: 45px;
   font-weight: normal;
   line-height: 1;
-  color: ${props => props.theme.primaryAccent};
+  color: ${(props) => props.theme.primaryAccent};
   margin: 0;
   padding: 0;
 `;

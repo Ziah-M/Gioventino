@@ -1,9 +1,9 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
+import Button from "../../Components/Buttons/StyledButton";
 import { ThemedContainer } from "../../Themes/AnimatedImgTheme";
 
-import Button from "../../Components/Buttons/StyledButton";
-import { Container, Row, Col } from "react-bootstrap";
 
 const Landing = () => {
   return (
@@ -13,7 +13,7 @@ const Landing = () => {
         height="calc(100vh + 50px)"
         style={{
           position: "absolute",
-          top:-50,
+          top: -50,
         }}
       >
         <Content />
@@ -62,7 +62,7 @@ const Content = ({
 
 const Box = styled.div`
   height: 100vh;
-  position:relative;
+  position: relative;
 `;
 
 const Wrapper = styled.div`

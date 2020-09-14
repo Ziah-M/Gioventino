@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faGooglePlusG,
-  faTwitter,
-  faYoutube,
-  faPinterest
+
+
+  faPinterest, faTwitter,
+  faYoutube
 } from "@fortawesome/fontawesome-free-brands";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import styled from "styled-components";
 
 const IconContainer = styled.div`
   border-radius: 50%;

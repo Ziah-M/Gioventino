@@ -1,22 +1,15 @@
+import {
+  faGem,
+  faMotorcycle,
+  faPizzaSlice,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
+import { AboutCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
 import { ThemedContainer } from "../../Themes/DarkTheme";
-import { AboutCard } from "../../Components/Card";
-import { Container, Row, Col } from "react-bootstrap";
-import {
-  faAddressCard,
-  faBars,
-  faClockO,
-  faGlobe,
-  faPictureO,
-  faGem,
-  faUsers,
-  faPizzaSlice,
-  faMotorcycle
-} from "@fortawesome/free-solid-svg-icons";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //TODO - media query to hide right column (with image) on small screens
 
@@ -42,7 +35,7 @@ const About = () => {
               minHeight: "100vh",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "space-evenly"
+              justifyContent: "space-evenly",
             }}
           >
             <Row>
@@ -100,12 +93,12 @@ const Img = styled.img`
 
 const SubHeading = styled.h2`
   text-align: center;
-  color: ${props => props.theme.primaryAccent};
+  color: ${(props) => props.theme.primaryAccent};
 `;
 
 const P = styled.p`
   text-align: center;
-  color: ${props => props.theme.textDark};
+  color: ${(props) => props.theme.textDark};
 `;
 
 export default About;

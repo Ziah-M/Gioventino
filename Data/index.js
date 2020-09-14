@@ -83,33 +83,39 @@ const CHEFS = [
   {
     name: "Chef John",
     position: "Head Chef",
-    imgUrl: "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    imgUrl:
+      "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     name: "Chef Alex",
     position: "Line Cook",
-    imgUrl: "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    imgUrl:
+      "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
   },
   {
     name: "Chef Andrei",
     position: "Line Cook",
-    imgUrl: "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    imgUrl:
+      "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   },
-    {
-      name: "Chef John",
-      position: "Head Chef",
-      imgUrl: "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    },
-    {
-      name: "Chef Alex",
-      position: "Line Cook",
-      imgUrl: "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    },
-    {
-      name: "Chef Andrei",
-      position: "Line Cook",
-      imgUrl: "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    },
+  {
+    name: "Chef John",
+    position: "Head Chef",
+    imgUrl:
+      "https://images.pexels.com/photos/2102934/pexels-photo-2102934.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  },
+  {
+    name: "Chef Alex",
+    position: "Line Cook",
+    imgUrl:
+      "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  },
+  {
+    name: "Chef Andrei",
+    position: "Line Cook",
+    imgUrl:
+      "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  },
 ];
 
 export const getProducts = () => PRODUCTS;

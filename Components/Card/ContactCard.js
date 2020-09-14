@@ -8,9 +8,9 @@ const bgColor = "rgb(32,33,39)";
 // TODO --- Can add props for each of the contact info details
 // including an array of opening hours (map to new line for each)
 
-const ContactCard = props => {
+const ContactCard = (props) => {
   const {
-    text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy."
+    text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy.",
   } = props;
   return (
     <StyledCard>
@@ -61,7 +61,7 @@ const StyledTextRow = styled(Row)`
 `;
 
 const StyledSubheading = styled(Card.Subtitle)`
-  color: ${props => props.theme.primaryAccent};
+  color: ${(props) => props.theme.primaryAccent};
   text-transform: uppercase;
   margin: 20px 0;
 `;

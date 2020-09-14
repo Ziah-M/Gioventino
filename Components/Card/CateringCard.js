@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import styled, { css } from "styled-components";
-import Heading from "../Heading";
+import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
+import Heading from "../Heading";
 
 const bgColor = "rgb(32,33,39)";
 
@@ -13,7 +13,7 @@ const CateringCard = (props) => {
   return (
     <StyledCard>
       <StyledCardBody>
-        <Row style={{margin:'20px 0px'}}>
+        <Row style={{ margin: "20px 0px" }}>
           <Col>
             <Heading
               topHeading="Your big day"
@@ -21,12 +21,12 @@ const CateringCard = (props) => {
             />
           </Col>
         </Row>
-        <Row style={{margin:'20px 0px'}}>
+        <Row style={{ margin: "20px 0px" }}>
           <Col>
             <StyledText>{text}</StyledText>
           </Col>
         </Row>
-        <Row style={{margin:'20px 0px'}}>
+        <Row style={{ margin: "20px 0px" }}>
           <Col>
             <Button>
               <b>ORDER NOW -></b>
@@ -64,12 +64,10 @@ const StyledCard = styled(Card)`
 const StyledCardBody = styled(Card.Body)`
   border: 2px solid #33343c;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   background-color: #18191e;
 `;
-
-
 
 export default CateringCard;

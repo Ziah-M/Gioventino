@@ -1,11 +1,16 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import styled from "styled-components";
+import { getProducts } from "../Data";
 
-import {getProducts, getProductCategories} from '../Data'
 
-const ProductMenu = ({ products = getProducts(), selectedCategory='Dinner' }) => {
-  const filteredProducts=products.filter(product => product.category===selectedCategory)
+const ProductMenu = ({
+  products = getProducts(),
+  selectedCategory = "Dinner",
+}) => {
+  const filteredProducts = products.filter(
+    (product) => product.category === selectedCategory
+  );
   return (
     <Container fluid>
       {filteredProducts.map(

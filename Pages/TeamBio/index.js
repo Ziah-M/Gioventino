@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import styled from "styled-components";
+import { getChefs } from "../../Data";
 import { ThemedContainer } from "../../Themes/DarkTheme";
+import BioSection from "./BioSection";
 import HeadingSection from "./HeadingSection";
 import Slider from "./Slider";
-import BioSection from "./BioSection";
-import Portrait from "./Portrait";
-import { getChefs } from "../../Data";
-import styled from "styled-components";
 
 const TeamBio = () => {
   const [chef, setChef] = useState(getChefs()[0]);
@@ -23,7 +21,7 @@ const TeamBio = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  padding:0 10vw;
+  padding: 0 10vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

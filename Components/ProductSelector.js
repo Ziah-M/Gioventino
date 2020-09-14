@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
 import { getProductCategories } from "../Data";
 
 const ProductCategoryFilter = ({

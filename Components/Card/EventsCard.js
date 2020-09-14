@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ButtonAlt as Button } from "../Buttons/StyledButton";
 
 const bgColor = "#deb150";
@@ -10,33 +10,36 @@ const bgColor = "#deb150";
 // INSTEAD OF A BORDER COMPONENT
 // OR AN <INNER> COMPONENT
 
-const EventsCard = props => {
+const EventsCard = (props) => {
   const {
     imageUrl = "https://images.pexels.com/photos/16408/pexels-photo.jpg?cs=srgb&dl=bar-drinks-party-champagne-16408.jpg&fm=jpg",
     title = "WINE TASTING",
     text = "Lorem ipsum placeholder text",
     month = "April",
-    date = "9"
+    date = "9",
   } = props;
   return (
     <StyledCard>
-      <StyledCardImg src={imageUrl} />
-      <StyledCardBody>
-        <DateOverlay>
-          <DateSpan>
-            <b>
-              {month}
-              <br />
-              {date}
-            </b>
-          </DateSpan>
-        </DateOverlay>
-        <StyledSubtitle>{title}</StyledSubtitle>
-        <StyledText>{text}</StyledText>
-        <Button>
-          <b>BOOK TICKET -></b>
-        </Button>
-      </StyledCardBody>
+      <ImgWrapper>
+        <StyledCardImg src={imageUrl} />
+        <Date>
+          <Border />
+          <b>
+            {month}
+            <br />
+            {date}
+          </b>
+        </Date>
+      </ImgWrapper>
+      <Body>
+        <StyledCardBody>
+          <StyledSubtitle>{title}</StyledSubtitle>
+          <StyledText>{text}</StyledText>
+          <Button>
+            <b>BOOK TICKET -></b>
+          </Button>
+        </StyledCardBody>
+      </Body>
       <StyledBorder />
     </StyledCard>
   );
@@ -56,23 +59,30 @@ const StyledBorder = styled.div`
 const StyledCard = styled(Card)`
   background-color: ${bgColor};
   position: relative;
-  min-height: 450px;
+  width: 300px;
+  height: 400px;
   border: none;
 `;
 
-const StyledCardBody = styled(Card.Body)`
-  display: grid;
+const Body = styled.div`
+  height: 40%;
+  width: 100%;
+  padding: 5%;
   position: relative;
-  z-index: 1;
-  justify-items: center;
+`;
 
-  /* To prevent overflowing the border */
-  padding: 10%;
+const StyledCardBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
 `;
 
 const StyledCardImg = styled(Card.Img)`
   width: 100%;
-  height: 60%;
+  height: 100%;
 `;
 
 const StyledSubtitle = styled(Card.Subtitle)`
@@ -86,28 +96,33 @@ const StyledText = styled(Card.Text)`
   color: black;
 `;
 
-const DateOverlay = styled.div`
-  position: absolute;
-  color: white;
-  background-color: ${props => props.theme.primaryAccent};
-  width: 55px;
-  height: 55px;
-  height: 30%;
-  text-align: center;
-  top: -125%;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  padding: 6% 0;
+const ImgWrapper = styled.div`
+  width: 100%;
+  height: 60%;
+  position: relative;
 `;
 
-const DateSpan = styled.div`
-  height: 40px;
-  width: 40px;
-  outline: 2px solid black;
-  color: black;
-  padding: 5px;
-  font-size: 0.7em;
+const Date = styled.div`
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background: #deb150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const Border = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid black;
+  z-index: 5;
+  transform: scale(0.9);
 `;
 
 export default EventsCard;

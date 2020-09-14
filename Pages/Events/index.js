@@ -14,7 +14,7 @@ const Events = () => {
           flexDirection: "column",
           justifyContent: "space-evenly",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <Row>

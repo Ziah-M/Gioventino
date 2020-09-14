@@ -1,11 +1,9 @@
 import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { ThemedContainer } from "../../Themes/DarkTheme";
-import Heading from "../../Components/Heading";
-import { Container, Row, Col } from "react-bootstrap";
 import SocialButtons from "../../Components/SocialButtons";
 
-const BioSection = ({chef}) => {
+const BioSection = ({ chef }) => {
   return (
     <Container fluid>
       <Row>

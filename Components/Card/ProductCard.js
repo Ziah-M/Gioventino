@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import { Card as BootstrapCard } from "react-bootstrap";
+import styled from "styled-components";
 import UnstyledButton from "../Buttons/StyledButton";
-import { Row, Col, Container, Card as BootstrapCard } from "react-bootstrap";
 import AbstractCard from "./AbstractCard";
 
 const ProductCard = (props) => {
@@ -116,11 +116,11 @@ const Button = styled(UnstyledButton)`
 `;
 
 const Wrap = styled.div`
-width:100%;
-display: flex;
+  width: 100%;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export default ProductCard;

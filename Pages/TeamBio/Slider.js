@@ -1,16 +1,13 @@
 import React from "react";
-import styled from "styled-components";
-import { ThemedContainer } from "../../Themes/DarkTheme";
-import Heading from "../../Components/Heading";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import TeamBioSlider from "../../Components/Slider/TeamSlider";
 
-const Slider = ({setSelectedChef=f=>f}) => {
+const Slider = ({ setSelectedChef = (f) => f }) => {
   return (
     <Container fluid>
       <Row className="d-flex justify-content-center">
         <Col xs={6} className="d-flex justify-content-center">
-          <TeamBioSlider setSelectedChef={setSelectedChef}/>
+          <TeamBioSlider setSelectedChef={setSelectedChef} />
         </Col>
       </Row>
     </Container>

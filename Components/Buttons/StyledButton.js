@@ -48,6 +48,8 @@ const ButtonDark = styled(StyledButton)`
 
 const ButtonAlt = styled(StyledButton)`
   border: 2px solid black;
+  position: relative;
+  z-index: 1000;
   color: ${(props) => props.theme.lightText};
   &:hover {
     color: ${(props) =>
@@ -63,3 +65,4 @@ const ButtonAlt = styled(StyledButton)`
 export default StyledButton;
 
 export { ButtonDark, StyledButton, ButtonAlt };
+
