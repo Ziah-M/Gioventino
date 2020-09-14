@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import MenuCard from "../../Components/Card/MenuCard";
 import { ThemedContainer } from "../../Themes/DarkTheme";
@@ -6,13 +6,14 @@ import Heading from "../../Components/Heading";
 import { Container, Row, Col } from "react-bootstrap";
 import ProductCategorySelector from "../../Components/ProductSelector";
 import ProductMenu from "../../Components/ProductMenu";
-
-const ProductCategories = ["Snacks", "Desert", "Dinner", "Breakfast", "Lunch"];
+import { getProducts, getProductCategories } from "../../Data";
 
 const DEFAULT_IMAGE_URL =
   "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 
-const Menu = () => {
+const Menu = ({ productCategories = getProductCategories() }) => {
+  const [selectedCategory, setSelectedCategory] = useState("Dinner");
+
   return (
     <ThemedContainer>
       <Container
@@ -23,7 +24,7 @@ const Menu = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <Row>
@@ -37,7 +38,7 @@ const Menu = () => {
             className="d-flex justify-content-center align-items-center"
             style={{ minHeight: "10vh" }}
           >
-            <ProductCategorySelector categories={ProductCategories} />
+            <ProductCategorySelector categories={productCategories} setCategory={setSelectedCategory} />
           </Col>
         </Row>
         <Row>
@@ -45,7 +46,7 @@ const Menu = () => {
             <MenuCard imageUrl={DEFAULT_IMAGE_URL} />
           </Col>
           <Col className="" md={7} sm={12}>
-            <ProductMenu />
+            <ProductMenu selectedCategory={selectedCategory}/>
           </Col>
         </Row>
       </Container>

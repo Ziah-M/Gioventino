@@ -2,51 +2,23 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Col, Row, Container } from "react-bootstrap";
 
-const DEFAULT_PRODUCTS = [
-  {
-    title: "ITALIAN PIZZA",
-    ingredients: "Tomato, Milk, Pizza, Pepperoni, Basil, Olives",
-    price: "$20",
-    imageUrl:
-      "https://images.pexels.com/photos/263041/pexels-photo-263041.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    title: "PEPPERONI PIZZA",
-    ingredients: "Pepperoni, Cheese, Sauce, Pizza, Oregano",
-    price: "$15",
-    imageUrl:
-      "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-  },
-  {
-    title: "SUPREME PIZZA",
-    ingredients: "Onion, Jalapenos, Pizza Sauce, Tomatoes, Cheese",
-    price: "$20",
-    imageUrl:
-      "https://images.pexels.com/photos/3053082/pexels-photo-3053082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-  },
-  {
-    title: "SUPREME PIZZA",
-    ingredients: "Onion, Jalapenos, Pizza Sauce, Tomatoes, Cheese",
-    price: "$20",
-    imageUrl:
-      "https://images.pexels.com/photos/3053082/pexels-photo-3053082.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-  }
-];
+import {getProducts, getProductCategories} from '../Data'
 
-const ProductMenu = ({ products = DEFAULT_PRODUCTS }) => {
+const ProductMenu = ({ products = getProducts(), selectedCategory='Dinner' }) => {
+  const filteredProducts=products.filter(product => product.category===selectedCategory)
   return (
     <Container fluid>
-      {products.map(
+      {filteredProducts.map(
         (product, index) =>
           index < 4 && (
             <StyledRow>
               <Col xs={3}>
-                <StyledCardImg src={product.imageUrl} />
+                <StyledCardImg src={product.imgUrl} />
               </Col>
               <Col style={{ marginLeft: "5%" }}>
                 <Row>
                   <ProduceItemHeading>
-                    {product.title} &nbsp; &nbsp; {product.price}
+                    {product.name} &nbsp; &nbsp; ${product.price}
                   </ProduceItemHeading>
                 </Row>
                 <Row>{product.ingredients}</Row>

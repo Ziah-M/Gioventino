@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import { getProductCategories } from "../Data";
 
-const ProductCategoryFilter = ({ categories = ["All"] }) => {
-  const [selected, setSelected] = useState(categories[0]);
+const ProductCategoryFilter = ({
+  categories = getProductCategories(),
+  setCategory = (f) => f,
+}) => {
+  const [selected, setSelected] = useState(categories[2]);
+
+  const handleClick = (category) => {
+    setSelected(category);
+    setCategory(category);
+  };
   return (
     <StyledContainer fluid>
       <Row noGutters>
-        {categories.map(category => (
+        {categories.map((category) => (
           <Col>
             <StyledButton
-              onClick={() => setSelected(category)}
+              onClick={() => handleClick(category)}
               isSelected={category === selected}
             >
               {category}
@@ -45,10 +54,10 @@ const StyledButton = styled.button`
     background-color: rgba(255, 255, 255, 0.4);
   }
 
-  ${props =>
+  ${(props) =>
     css`
       ${props.isSelected &&
-        `
+      `
       background-color: #deb150;
       color: black;
 
