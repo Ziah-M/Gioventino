@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import {
-  CardGroup as UnstyledCardGroup
-} from "react-bootstrap";
+import { CardGroup as UnstyledCardGroup } from "react-bootstrap";
 import styled from "styled-components";
 import { GalleryCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
@@ -35,21 +33,26 @@ const Gallery = ({
           topHeading="Your next favourite dish"
           bottomHeading="Gallery"
         />
-        <ProductCategorySelector
-          categories={categories}
-          setCategory={setSelectedCategory}
-        />
-        <PicturesSection>
-          {filteredProducts.map((item) => (
-            <Picture>
-              <GalleryCard
-                imageUrl={item.imgUrl}
-                heading={item.name}
-                subheading={item.category}
-              />
-            </Picture>
-          ))}
-        </PicturesSection>
+        <Categories>
+          <ProductCategorySelector
+            categories={categories}
+            setCategory={setSelectedCategory}
+          />
+        </Categories>
+        <WrapperPictures>
+          <PicturesSection>
+            {filteredProducts.map((item, index) => (
+              <Picture>
+                <GalleryCard
+                  imageUrl={item.imgUrl}
+                  heading={item.name}
+                  subheading={item.category}
+                  className={`${index > 3 ? "excess" : ""}`}
+                />
+              </Picture>
+            ))}
+          </PicturesSection>
+        </WrapperPictures>
       </Wrapper>
     </ThemedContainer>
   );
@@ -57,6 +60,14 @@ const Gallery = ({
 
 const CardGroup = styled(UnstyledCardGroup)`
   margin: 0px 25px;
+`;
+
+const Categories = styled.div`
+  margin: 0 auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Wrapper = styled.div`
@@ -68,12 +79,32 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
 `;
 
+const WrapperPictures=styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+`
+
 const PicturesSection = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: center;
   justify-content: start;
-  min-height: 600px;
+  align-content: center;
+  justify-items:center;
+  height: 600px;
+  @media (max-width:850px){
+    height:900px
+  }
+  @media (max-width:650px){
+    flex-direction:row;
+    height:auto;
+    justify-content:center;
+    align-items:start;
+    justify-items:center;
+  }
 `;
 
 const Picture = styled.div`

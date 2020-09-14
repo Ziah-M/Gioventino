@@ -3,7 +3,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { getProducts } from "../Data";
 
-
 const ProductMenu = ({
   products = getProducts(),
   selectedCategory = "Dinner",
@@ -23,10 +22,10 @@ const ProductMenu = ({
               <Col style={{ marginLeft: "5%" }}>
                 <Row>
                   <ProduceItemHeading>
-                    {product.name} &nbsp; &nbsp; ${product.price}
+                    {product.name} &nbsp;-> ${product.price}
                   </ProduceItemHeading>
                 </Row>
-                <Row>{product.ingredients}</Row>
+                <Ingredients>{product.ingredients}</Ingredients>
               </Col>
             </StyledRow>
           )
@@ -37,6 +36,12 @@ const ProductMenu = ({
 
 const ProduceItemHeading = styled.span`
   color: #deb150;
+  margin-bottom: 5px;
+  font-size: 22px;
+`;
+
+const Ingredients = styled(Row)`
+  font-size: 12px;
 `;
 
 const StyledCardImg = styled.img`

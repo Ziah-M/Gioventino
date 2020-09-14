@@ -1,11 +1,7 @@
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import {
-  Col,
-
-  FormControl, InputGroup as UnstyledInputGroup, Row as UnstyledRow
-} from "react-bootstrap";
+import { FormControl, InputGroup as UnstyledInputGroup } from "react-bootstrap";
 import styled from "styled-components";
 import Heading from "../../Components/Heading";
 import SocialButtons from "../../Components/SocialButtons";
@@ -17,61 +13,26 @@ const Footer = () => {
       height="75vh"
       bgImg="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     >
-      <UnstyledRow
-        style={{
-          height: "75vh",
-          padding: "15vh 0",
-        }}
-      >
-        <Col
-          xs={12}
-          className="d-flex flex-column justify-content-between align-items-center"
-        >
-          <Row>
-            <Col
-              xs={12}
-              className="d-flex justify-content-center align-items-center"
-            >
-              <Heading
-                topHeading="Be the first to know"
-                bottomHeading="Subscribe"
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className="d-flex justify-content-center">
-              <Text>
-                Subscribe to our Newsletter to
-                <br />
-                get exciting offers and be the first to hear about upcoming
-                events
-              </Text>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className="d-flex justify-content-center">
-              <InputGroup>
-                <Control placeholder="Email" />
-                <InputGroup.Prepend>
-                  <InputIcon>
-                    <FontAwesomeIcon icon={faLocationArrow} />
-                  </InputIcon>
-                </InputGroup.Prepend>
-              </InputGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className="d-flex justify-content-center">
-              <SocialButtons />
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className="d-flex justify-content-center">
-              <Copywrite>&copy; 2020 All Rights Reserved</Copywrite>
-            </Col>
-          </Row>
-        </Col>
-      </UnstyledRow>
+      <Wrapper>
+        <Heading topHeading="Be the first to know" bottomHeading="Subscribe" />
+        <Text>
+          Subscribe to our Newsletter to
+          <br />
+          get exciting offers and be the first to hear about upcoming events
+        </Text>
+        <InputGroup>
+          <Control placeholder="Email" />
+          <InputGroup.Prepend>
+            <InputIcon>
+              <FontAwesomeIcon icon={faLocationArrow} />
+            </InputIcon>
+          </InputGroup.Prepend>
+        </InputGroup>
+        <SocialButtonsGroup>
+          <SocialButtons />
+        </SocialButtonsGroup>
+        <Copywrite>&copy; 2020 All Rights Reserved</Copywrite>
+      </Wrapper>
     </ThemedContainer>
   );
 };
@@ -104,15 +65,31 @@ const InputIcon = styled(InputGroup.Text)`
   }
 `;
 
-const Row = styled(UnstyledRow)``;
-
 const Text = styled.p`
   text-align: center;
+  max-width: 75vw;
+  height: auto;
   color: ${(props) => props.theme.darkText};
 `;
 
 const Copywrite = styled.p`
   color: white;
+`;
+
+const Wrapper = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 75vh;
+  padding: 10vh 10vw;
+`;
+
+const SocialButtonsGroup = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 export default Footer;

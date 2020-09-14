@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import ContactCard from "../../Components/Card/ContactCard";
 import { ThemedContainer } from "../../Themes/DarkTheme";
@@ -19,23 +19,12 @@ const Contact = () => {
           minHeight: "100vh",
         }}
       >
-        <Row style={{ height: "100%", width: "100vw" }}>
-          <Col
-            xs={12}
-            className="d-flex justify-content-center align-items-center"
-          >
-            <InnerContainer fluid>
-              <Row>
-                <Col xs={12} sm={9} md={6}>
-                  <ContactCard />
-                </Col>
-                <Col className="d-none d-md-block">
-                  <Map />
-                </Col>
-              </Row>
-            </InnerContainer>
-          </Col>
-        </Row>
+        <InnerContainer>
+          <ContactCard />
+          <Wrapper>
+            <Map />
+          </Wrapper>
+        </InnerContainer>
       </Container>
     </ThemedContainer>
   );
@@ -43,8 +32,19 @@ const Contact = () => {
 
 // TODO -- OUTLINE
 const InnerContainer = styled(Container)`
-  outline: 5px solid rgb(24, 25, 30);
+  border: 5px solid rgb(24, 25, 30);
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+`;
+
+const Wrapper = styled.div`
+  height: 500px;
+  @media (max-width: 780px) {
+    display: none;
+  }
 `;
 
 export default Contact;

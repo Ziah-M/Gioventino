@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const AbstractCard = (props) => {
-  console.log(props);
   return (
     <Card className={props.className}>
       <Border />

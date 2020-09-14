@@ -35,7 +35,7 @@ const Menu = ({ productCategories = getProductCategories() }) => {
           <Col
             xs={12}
             className="d-flex justify-content-center align-items-center"
-            style={{ minHeight: "10vh" }}
+            style={{ minHeight: "10vh", padding:0, margin:0 }}
           >
             <ProductCategorySelector
               categories={productCategories}

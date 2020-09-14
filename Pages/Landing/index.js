@@ -91,6 +91,9 @@ const Tagline = styled.h3`
   outline: none !important;
   color: #ffffff;
   font-size: 20px;
+  @media (max-width: 768px){
+    font-size:18px;
+  }
   line-height: 27px;
   text-transform: uppercase;
   font-weight: normal;
@@ -106,6 +109,9 @@ const Heading = styled.h2`
   outline: none !important;
   font-family: "Allura", cursive;
   font-size: 60px;
+  @media (max-width: 768px){
+    font-size:40px;
+  }
   font-weight: normal;
   line-height: 1;
   color: ${(props) => props.theme.primaryAccent};
@@ -119,6 +125,9 @@ const BrandName = styled.h1`
   outline: none !important;
   color: #ffffff;
   font-size: 70px;
+  @media (max-width: 768px){
+    font-size:50px;
+  }
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;

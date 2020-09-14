@@ -11,17 +11,19 @@ const ProductCard = (props) => {
       <StyledCardImg src={imageUrl} />
       <Inner>
         <Price>{price}</Price>
-        <Text-Area>
-          <Subtitle>
-            {title}
-            <br />
-            ~~~~~~
-          </Subtitle>
-          <Text>{text}</Text>
-          <Wrap>
-            <Button>Order Now -></Button>
-          </Wrap>
-        </Text-Area>
+        <ContentWrapper>
+          <TextArea>
+            <Subtitle>
+              {title}
+              <br />
+              ~~~~~~
+            </Subtitle>
+            <Text>{text}</Text>
+            <Wrap>
+              <Button>Order Now -></Button>
+            </Wrap>
+          </TextArea>
+        </ContentWrapper>
       </Inner>
     </Card>
   );
@@ -70,8 +72,14 @@ const Price = styled.div`
   transform: translate(-50%);
 `;
 
+const ContentWrapper = styled.div`
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  padding: 10% 6%;
+`;
+
 const TextArea = styled.div`
-  padding: 5%;
   width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -91,7 +99,7 @@ const Subtitle = styled(BootstrapCard.Subtitle)`
 const Text = styled(BootstrapCard.Text)`
   color: black;
   padding: 5%;
-  font-size: 100%;
+  font-size: 14px;
   text-align: center;
 `;
 

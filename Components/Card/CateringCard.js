@@ -1,45 +1,30 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
 import Heading from "../Heading";
 
-const bgColor = "rgb(32,33,39)";
+const TEXT = `
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur maiores dolorum earum ipsa eveniet ipsam voluptate mollitia architecto. Eveniet, laborum.
+`;
 
-const CateringCard = (props) => {
-  const {
-    text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy.",
-  } = props;
+const TestimonialCard = ({ text = TEXT }) => {
   return (
-    <StyledCard>
-      <StyledCardBody>
-        <Row style={{ margin: "20px 0px" }}>
-          <Col>
-            <Heading
-              topHeading="Your big day"
-              bottomHeading="Catering Service"
-            />
-          </Col>
-        </Row>
-        <Row style={{ margin: "20px 0px" }}>
-          <Col>
-            <StyledText>{text}</StyledText>
-          </Col>
-        </Row>
-        <Row style={{ margin: "20px 0px" }}>
-          <Col>
-            <Button>
-              <b>ORDER NOW -></b>
-            </Button>
-          </Col>
-        </Row>
-      </StyledCardBody>
-    </StyledCard>
+    <Wrapper>
+      <Outer>
+        <Inner>
+          <Heading topHeading="Your big day" bottomHeading="Catering Service" />
+
+          <StyledText>{text}</StyledText>
+
+          <Button>
+            <b>ORDER NOW -></b>
+          </Button>
+        </Inner>
+      </Outer>
+    </Wrapper>
   );
 };
-
-// BOOTSTRAP STYLES
-const StyledContainer = styled(Container)``;
 
 const StyledText = styled(Card.Text)`
   color: #a19fa0;
@@ -48,26 +33,29 @@ const StyledText = styled(Card.Text)`
   margin: 0 20px;
 `;
 
-const StyledCard = styled(Card)`
-  background-color: ${bgColor};
-  padding: 20px;
+const Wrapper = styled.div`
+  width: 320px;
+  height: 500px;
+`;
 
-  /* Styles for positioning IMG on card */
-  position: relative;
-  display: grid;
-  justify-items: center;
-
+const Outer = styled.div`
+  width: inherit;
+  height: inherit;
   background-color: #202127;
   box-shadow: 0px 2px 48px 9px rgba(0, 0, 0, 0.43);
 `;
 
-const StyledCardBody = styled(Card.Body)`
+const Inner = styled.div`
+  width: inherit;
+  height: inherit;
+  transform: scale(0.9);
+  background-color: #18191e;
   border: 2px solid #33343c;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #18191e;
+  justify-content: space-evenly;
 `;
 
-export default CateringCard;
+export default TestimonialCard;

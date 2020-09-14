@@ -26,6 +26,7 @@ const GalleryCard = (props) => {
       imageUrl={imageUrl}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
+      className={props.className}
     >
       <StyledCard show={show}>
         <StyledCardBody>
@@ -48,6 +49,12 @@ const StyledContainer = styled(Container)`
   width: ${WIDTH_AND_HEIGHT};
   padding: 0px;
   user-select: none;
+
+  @media (max-width: 600px) {
+    &.excess {
+      display: none;
+    }
+  }
 
   background-size: cover;
 

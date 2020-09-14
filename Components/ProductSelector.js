@@ -14,39 +14,56 @@ const ProductCategoryFilter = ({
     setCategory(category);
   };
   return (
-    <StyledContainer fluid>
-      <Row noGutters>
-        {categories.map((category) => (
-          <Col>
-            <StyledButton
-              onClick={() => handleClick(category)}
-              isSelected={category === selected}
-            >
-              {category}
-            </StyledButton>
-          </Col>
-        ))}
-      </Row>
+    <StyledContainer>
+      {categories.map((category) => (
+        <StyledButton
+          onClick={() => handleClick(category)}
+          isSelected={category === selected}
+        >
+          {category}
+        </StyledButton>
+      ))}
     </StyledContainer>
   );
 };
 
-const StyledContainer = styled(Container)`
+const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  width:100vw;
 `;
 
 const StyledButton = styled.button`
   background-color: rgba(255, 255, 255, 0.2);
-  margin: 0px 0.25vw;
+  margin: 0px 1px;
   color: white;
   border: none;
-  padding: 0.75vw 2.25vw;
+  padding: 3px 4px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 2vw;
-  min-width: 15vw;
-  max-width: 17vw;
+  font-size: 12px;
+  width: 74px;
+
+  @media (max-width: 413px) {
+    font-size: 10px;
+    width: 60px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 20px;
+    width: 150px;
+    padding: 18px 24px;
+    margin: 0 3px;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 15px;
+    width: 100px;
+    padding: 9px 12px;
+    margin: 0 3px;
+  }
+
   border: none !important;
   outline: none !important;
 
