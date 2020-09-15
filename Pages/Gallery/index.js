@@ -28,7 +28,7 @@ const Gallery = ({
   );
   return (
     <ThemedContainer>
-      <Wrapper>
+      <Wrapper id='gallery'>
         <Heading
           topHeading="Your next favourite dish"
           bottomHeading="Gallery"

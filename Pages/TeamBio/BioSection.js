@@ -18,20 +18,11 @@ const BioSection = ({ chef }) => {
       </Row>
       <Row>
         <TextOneCol xs={12}>
-          <b>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, temporibus! Minus repudiandae facere id iure?
-          </b>
+          <b>{chef.overview}</b>
         </TextOneCol>
       </Row>
       <Row>
-        <TextTwoCol xs={12}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-          harum consequatur magnam, aut eum pariatur voluptatum unde suscipit
-          est, sequi quibusdam similique sed perferendis aperiam, ipsam itaque.
-          Quaerat rerum voluptatum eum adipisci voluptatem corporis cum, impedit
-          architecto debitis illum magni!
-        </TextTwoCol>
+        <TextTwoCol xs={12}>{chef.bio}</TextTwoCol>
       </Row>
       <Row>
         <SocialCol xs={12}>

@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
 import Heading from "../Heading";
+import { Link as UnstyledLink } from "react-scroll";
 
 const TEXT = `
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur maiores dolorum earum ipsa eveniet ipsam voluptate mollitia architecto. Eveniet, laborum.
@@ -16,10 +17,11 @@ const TestimonialCard = ({ text = TEXT }) => {
           <Heading topHeading="Your big day" bottomHeading="Catering Service" />
 
           <StyledText>{text}</StyledText>
-
-          <Button>
-            <b>ORDER NOW -></b>
-          </Button>
+          <Link to="spy-reservation" smooth duration={500}>
+            <Button>
+              <b>ORDER NOW -></b>
+            </Button>
+          </Link>
         </Inner>
       </Outer>
     </Wrapper>
@@ -57,5 +59,7 @@ const Inner = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
+
+const Link = styled(UnstyledLink)``;
 
 export default TestimonialCard;

@@ -11,20 +11,40 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
     dots: false,
     infinite: true,
     speed: 1500,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    responsive:[
+    centerMode:true,
+   
+    responsive: [
       {
-        breakpoint:500,
-        settings:{
-          slidesToShow:1,
-        }
-      }
-    ]
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
 
   return (
@@ -34,9 +54,7 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
           <Col xs={12}>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
-                <Col className="p-0 m-0" index={index}>
-                  <TestimonialCard testimonial={testimonial} />
-                </Col>
+                <TestimonialCard testimonial={testimonial} />
               ))}
             </Slider>
           </Col>

@@ -15,6 +15,7 @@ const H2 = styled.h2`
   color: ${(props) => props.theme.primaryAccent};
   margin: 0;
   padding: 0;
+  user-select:none;
 `;
 
 const H1 = styled.h1`
@@ -30,6 +31,8 @@ const H1 = styled.h1`
   display: block;
   font-family: "Montserrat", sans-serif;
   margin: 0;
+  user-select:none;
+
 `;
 const Heading = ({ topHeading = "", bottomHeading = "" }) => {
   return (

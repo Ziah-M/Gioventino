@@ -3,6 +3,7 @@ import { Card as BootstrapCard } from "react-bootstrap";
 import styled from "styled-components";
 import UnstyledButton from "../Buttons/StyledButton";
 import AbstractCard from "./AbstractCard";
+import { Link as UnstyledLink } from "react-scroll";
 
 const ProductCard = (props) => {
   const { imageUrl, title = "ITALIAN PIZZA", text, price } = props;
@@ -20,7 +21,9 @@ const ProductCard = (props) => {
             </Subtitle>
             <Text>{text}</Text>
             <Wrap>
+          <Link to="spy-reservation" smooth duration={500}>
               <Button>Order Now -></Button>
+              </Link>
             </Wrap>
           </TextArea>
         </ContentWrapper>
@@ -130,5 +133,8 @@ const Wrap = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+const Link = styled(UnstyledLink)``;
+
 
 export default ProductCard;

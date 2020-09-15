@@ -2,6 +2,7 @@ import {
   faGem,
   faMotorcycle,
   faPizzaSlice,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -66,13 +67,13 @@ const About = () => {
                 </AboutCard>
               </Col>
               <Col xs={6} sm={4}>
-                <AboutCard text="Fresh Ingredients">
-                  <FontAwesomeIcon icon={faPizzaSlice} />
+                <AboutCard text="Covid Safe">
+                  <FontAwesomeIcon icon={faCheck} />
                 </AboutCard>
               </Col>
               <Col sm={4} className="d-none d-sm-block">
-                <AboutCard text="Highest Quality">
-                  <FontAwesomeIcon icon={faGem} />
+                <AboutCard text="Fresh Ingredients">
+                  <FontAwesomeIcon icon={faPizzaSlice} />
                 </AboutCard>
               </Col>
             </Row>
@@ -93,11 +94,13 @@ const Img = styled.img`
 
 const SubHeading = styled.h2`
   text-align: center;
+  user-select: none;
   color: ${(props) => props.theme.primaryAccent};
 `;
 
 const P = styled.p`
   text-align: center;
+  user-select:none;
   color: ${(props) => props.theme.textDark};
 `;
 

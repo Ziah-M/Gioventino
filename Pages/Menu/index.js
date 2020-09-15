@@ -23,7 +23,7 @@ const Menu = ({ productCategories = getProductCategories() }) => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh",
+          minHeight: "120vh",
         }}
       >
         <Row>

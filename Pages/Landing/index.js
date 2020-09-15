@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Button from "../../Components/Buttons/StyledButton";
 import { ThemedContainer } from "../../Themes/AnimatedImgTheme";
-
+import { Link as UnstyledLink } from "react-scroll";
 
 const Landing = () => {
   return (
@@ -50,10 +50,14 @@ const Content = ({
       </Row>
       <Row noGutters>
         <Col xs={6}>
-          <StyledButton>BOOK TABLE -></StyledButton>
+          <Link to="spy-reservation" smooth duration={1000}>
+            <StyledButton>BOOK TABLE -></StyledButton>
+          </Link>
         </Col>
         <Col xs={6}>
-          <StyledButton>VIEW MENU -></StyledButton>
+          <Link to="spy-menu" smooth duration={1000}>
+            <StyledButton>VIEW MENU -></StyledButton>
+          </Link>
         </Col>
       </Row>
     </Wrapper>
@@ -91,8 +95,8 @@ const Tagline = styled.h3`
   outline: none !important;
   color: #ffffff;
   font-size: 20px;
-  @media (max-width: 768px){
-    font-size:18px;
+  @media (max-width: 768px) {
+    font-size: 18px;
   }
   line-height: 27px;
   text-transform: uppercase;
@@ -109,8 +113,8 @@ const Heading = styled.h2`
   outline: none !important;
   font-family: "Allura", cursive;
   font-size: 60px;
-  @media (max-width: 768px){
-    font-size:40px;
+  @media (max-width: 768px) {
+    font-size: 40px;
   }
   font-weight: normal;
   line-height: 1;
@@ -125,8 +129,8 @@ const BrandName = styled.h1`
   outline: none !important;
   color: #ffffff;
   font-size: 70px;
-  @media (max-width: 768px){
-    font-size:50px;
+  @media (max-width: 768px) {
+    font-size: 50px;
   }
   line-height: 1.2;
   text-transform: uppercase;
@@ -141,5 +145,7 @@ const StyledButton = styled(Button)`
   margin: 0 10px;
   min-width: 150px;
 `;
+
+const Link = styled(UnstyledLink)``;
 
 export default Landing;

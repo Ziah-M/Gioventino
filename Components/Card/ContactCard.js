@@ -45,13 +45,13 @@ const TestimonialCard = ({}) => {
 // BOOTSTRAP STYLES
 const StyledText = styled(Card.Text)`
   color: #a19fa0;
-  text-align: center;
+ 
   font-family: "Montserrat", sans-serif;
   margin: 0 20px;
 `;
 
 const StyledTextRow = styled(Row)`
-  border-bottom: 3px dotted dimgray;
+  
   margin: 10px 0;
 `;
 

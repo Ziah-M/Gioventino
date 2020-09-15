@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import styled from "styled-components";
 import { ButtonAlt as Button } from "../Buttons/StyledButton";
+import { Link as UnstyledLink } from "react-scroll";
 
 const bgColor = "#deb150";
 
@@ -35,9 +36,11 @@ const EventsCard = (props) => {
         <StyledCardBody>
           <StyledSubtitle>{title}</StyledSubtitle>
           <StyledText>{text}</StyledText>
-          <Button>
-            <b>BOOK TICKET -></b>
-          </Button>
+          <Link to="spy-reservation" smooth duration={1000}>
+            <Button>
+              <b>BOOK TICKET -></b>
+            </Button>
+          </Link>
         </StyledCardBody>
       </Body>
       <StyledBorder />
@@ -124,5 +127,7 @@ const Border = styled.div`
   z-index: 5;
   transform: scale(0.9);
 `;
+
+const Link = styled(UnstyledLink)``;
 
 export default EventsCard;
