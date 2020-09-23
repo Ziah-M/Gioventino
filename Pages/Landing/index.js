@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col as UnstyledCol, Row as UnstyledRow } from "react-bootstrap";
 import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 import Button from "../../Components/Buttons/StyledButton";
@@ -71,6 +71,14 @@ const Box = styled.div`
   position: relative;
 `;
 
+const Row = styled(UnstyledRow)`
+  margin: 0;
+`;
+
+const Col = styled(UnstyledCol)`
+  margin: 0;
+`;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -82,17 +90,6 @@ const Wrapper = styled.div`
   max-width: 100%;
 `;
 
-//TODO
-const PageDivide = styled.div`
-  text-align: center;
-  box-sizing: border-box;
-  outline: none !important;
-  font-weight: normal;
-  display: block;
-  margin: 0 0 5px 0;
-`;
-
-//TODO
 const Tagline = styled.h3`
   text-align: center;
   box-sizing: border-box;

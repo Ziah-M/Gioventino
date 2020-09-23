@@ -27,7 +27,6 @@ const App = () => {
     //TODO -- maxWidth is a temporary fix to width overflowing the viewport
     <GlobalStyles style={{ width: "100%", maxWidth: "100%" }}>
       <ThemeProvider theme={theme}>
-        {/* <Header /> */}
         <Navbar />
         <div id="spy-home">
           <Landing />
@@ -67,7 +66,8 @@ const GlobalStyles = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  width: 100vw;
+  width: 100%;
+  max-width:100%;
   margin: 0;
   background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
 `;

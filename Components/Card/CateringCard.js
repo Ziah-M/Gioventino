@@ -38,6 +38,7 @@ const StyledText = styled(Card.Text)`
 const Wrapper = styled.div`
   width: 320px;
   height: 500px;
+  position:absolute;
 `;
 
 const Outer = styled.div`

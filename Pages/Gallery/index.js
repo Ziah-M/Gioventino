@@ -64,7 +64,8 @@ const CardGroup = styled(UnstyledCardGroup)`
 
 const Categories = styled.div`
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +86,8 @@ const WrapperPictures = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
 `;
 
 const PicturesSection = styled.div`

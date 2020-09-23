@@ -31,32 +31,38 @@ const CateringSlider = ({ testimonials = DEFUALT_IMAGES }) => {
   };
 
   return (
-    <>
-      <StyledContainer fluid className="p-0">
-        <Slider {...settings} className="slider">
-          {testimonials.map((imageSrc, index) => (
-            <Col className="p-0" index={index}>
-              <CateringSliderImg src={imageSrc} />
-            </Col>
-          ))}
-        </Slider>
-      </StyledContainer>
-    </>
+    <Wrapper>
+      <Slider {...settings}>
+        {testimonials.map((imageSrc, index) => (
+          <ImgWrapper key={`slider-carousel-item-${index}`}>
+            <CateringSliderImg src={imageSrc} />
+          </ImgWrapper>
+        ))}
+      </Slider>
+    </Wrapper>
   );
 };
 
-const StyledContainer = styled(Container)`
+const Wrapper = styled.div`
   width: 100%;
   max-width: 100%;
+
   padding: 0;
   margin: 0;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
   z-index: 0;
+  overflow:hidden;
+`;
+
+const ImgWrapper = styled.div`
+  width: 20%;
+  height: 100vh;
 `;
 
 const CateringSliderImg = styled.img`
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  max-width: 100vh;
 `;
 
 export default CateringSlider;

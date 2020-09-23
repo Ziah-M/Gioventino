@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import {
+  Col as UnstyledCol,
+  Container,
+  Row as UnstyledRow
+} from "react-bootstrap";
+import styled from "styled-components";
 import MenuCard from "../../Components/Card/MenuCard";
 import Heading from "../../Components/Heading";
 import ProductMenu from "../../Components/ProductMenu";
@@ -59,5 +64,13 @@ const Menu = ({ productCategories = getProductCategories() }) => {
     </ThemedContainer>
   );
 };
+
+const Row = styled(UnstyledRow)`
+  margin: 0;
+`;
+
+const Col = styled(UnstyledCol)`
+  margin: 0;
+`;
 
 export default Menu;

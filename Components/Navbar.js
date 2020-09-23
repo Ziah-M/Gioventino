@@ -113,6 +113,8 @@ const Navbar = styled(UnstyledNavbar)`
   background-color: #1c2331 !important;
   opacity: 0.5;
   color: white;
+  width: 100%;
+  max-width: 100%;
   position: sticky;
   top: 0;
   left: 0;
