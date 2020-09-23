@@ -1,0 +1,7 @@
+/* TODO - a hack to remove the active slide styles internally applied by slick-slider */
+/* note: THE SLICK INTERFACE HAS BOOLEANS FOR REMOVING THESE I THINK */
+
+div {
+  outline: none;
+  border: none;
+}
