@@ -23,12 +23,12 @@ const GalleryCard = (props) => {
   return (
     <StyledContainer
       fluid
-      imageUrl={imageUrl}
+      imageurl={imageUrl}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
       className={props.className}
     >
-      <StyledCard show={show}>
+      <StyledCard show={show ? 'true' : 'false'}>
         <StyledCardBody>
           <PseudoButton>+</PseudoButton>
           <StyledTitle>{heading}</StyledTitle>
@@ -60,7 +60,7 @@ const StyledContainer = styled(Container)`
 
   ${(props) =>
     css`
-      background-image: url(${props.imageUrl});
+      background-image: url(${props.imageurl});
     `}
 `;
 
@@ -99,7 +99,7 @@ const StyledCard = styled(Card)`
   user-select: none;
 
   ${(props) =>
-    props.show &&
+    props.show==='true' &&
     css`
       display: block;
     `}

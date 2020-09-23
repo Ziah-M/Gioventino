@@ -61,6 +61,7 @@ const Popular = () => {
                 text={item.ingredients}
                 price={item.price}
                 imageUrl={item.imageUrl}
+                key={`popular-page-${index}`}
               />
             ))}
           </CardDeck>

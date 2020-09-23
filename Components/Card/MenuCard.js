@@ -13,16 +13,6 @@ const MenuCard = (props) => {
   );
 };
 
-// THIS ELEMENT IS PURELY STYLISTIC
-const StyledBorder = styled.div`
-  position: absolute;
-  top: 4%;
-  left: 4%;
-  height: 92%;
-  width: 92%;
-  border: 1% solid #303035;
-`;
-
 // BOOTSTRAP STYLES
 const StyledCard = styled(Card)`
   background-color: ${bgColor};

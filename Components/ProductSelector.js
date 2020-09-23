@@ -14,10 +14,11 @@ const ProductCategoryFilter = ({
   };
   return (
     <StyledContainer>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <StyledButton
           onClick={() => handleClick(category)}
           isSelected={category === selected}
+          key={`product-filter-component-${index}`}
         >
           {category}
         </StyledButton>

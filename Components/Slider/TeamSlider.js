@@ -26,8 +26,8 @@ const TeamBioSlider = ({ chefs = getChefs(), setSelectedChef = (f) => f }) => {
     <>
       <Container fluid className="p-0" style={{ width: "60vw" }}>
         <Slider {...settings}>
-          {chefs.map((chef) => (
-            <Col className="p-0">
+          {chefs.map((chef, index) => (
+            <Col className="p-0" key={`chef-slider-${index}`}>
               <ChefPortrait
                 src={chef.imgUrl}
                 alt="chef portrait"

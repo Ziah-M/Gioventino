@@ -24,7 +24,7 @@ const About = () => {
   return (
     <ThemedContainer>
       <Container id="about" fluid style={{ minHeight: "100vh" }}>
-        <Row nOGutters>
+        <Row noGutters>
           <Col
             md={8}
             lg={7}

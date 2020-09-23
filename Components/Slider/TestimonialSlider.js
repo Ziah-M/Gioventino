@@ -54,7 +54,7 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
           <Col xs={12}>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
-                <TestimonialCard testimonial={testimonial} />
+                <TestimonialCard testimonial={testimonial} key={`testimonial-slider-${index}`} />
               ))}
             </Slider>
           </Col>

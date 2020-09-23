@@ -15,7 +15,7 @@ const ProductMenu = ({
       {filteredProducts.map(
         (product, index) =>
           index < 4 && (
-            <StyledRow>
+            <StyledRow key={`product-menu-${index}`}>
               <Col xs={3}>
                 <StyledCardImg src={product.imgUrl} />
               </Col>

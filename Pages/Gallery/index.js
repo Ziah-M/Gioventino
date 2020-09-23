@@ -42,7 +42,7 @@ const Gallery = ({
         <WrapperPictures>
           <PicturesSection>
             {filteredProducts.map((item, index) => (
-              <Picture>
+              <Picture key={`gallery-page-${index}`}>
                 <GalleryCard
                   imageUrl={item.imgUrl}
                   heading={item.name}

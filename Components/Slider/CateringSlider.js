@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   margin: 0;
   height: 100vh;
   z-index: 0;
-  overflow:hidden;
+  overflow: hidden;
 `;
 
 const ImgWrapper = styled.div`
