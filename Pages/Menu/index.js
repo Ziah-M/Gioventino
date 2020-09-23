@@ -24,6 +24,10 @@ const Menu = ({ productCategories = getProductCategories() }) => {
           justifyContent: "center",
           alignItems: "center",
           minHeight: "120vh",
+          maxWidth: "100%",
+          width: "100%",
+          padding: 0,
+          margin: 0,
         }}
       >
         <Row>
@@ -35,7 +39,7 @@ const Menu = ({ productCategories = getProductCategories() }) => {
           <Col
             xs={12}
             className="d-flex justify-content-center align-items-center"
-            style={{ minHeight: "10vh", padding:0, margin:0 }}
+            style={{ minHeight: "10vh", padding: 0, margin: 0 }}
           >
             <ProductCategorySelector
               categories={productCategories}

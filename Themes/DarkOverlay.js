@@ -5,7 +5,8 @@ const DarkOverlay = styled.div`
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ const DarkOverlay = styled.div`
   /* Default padding that will be applied to all pages */
   padding: 30px 0;
 
-  ${props =>
+  ${(props) =>
     css`
       min-height: ${props.height};
       background: rgba(0, 0, 0, ${props.transparency || 0.6});

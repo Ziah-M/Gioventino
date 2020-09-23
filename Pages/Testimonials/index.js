@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import { ThemedContainer } from "../../Themes/ImgTheme";
+import { Col, Container, Row } from "react-bootstrap";
 import Heading from "../../Components/Heading";
-import { Container, Row, Col } from "react-bootstrap";
 import TestimonialSlider from "../../Components/Slider/TestimonialSlider";
+import { ThemedContainer } from "../../Themes/ImgTheme";
 
 const Testimonials = () => {
   return (
@@ -15,7 +14,11 @@ const Testimonials = () => {
           flexDirection: "column",
           justifyContent: "space-around",
           alignItems: "center",
-          minHeight: "100vh"
+          minHeight: "100vh",
+          maxWidth: "100%",
+          width: "100%",
+          padding: 0,
+          margin: 0,
         }}
       >
         <Row>

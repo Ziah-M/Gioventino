@@ -29,11 +29,13 @@ const StyledCard = styled(Card)`
   position: relative;
   height: 100%;
   width: 100%;
+  user-select: none;
 `;
 
 const StyledCardImg = styled(Card.Img)`
   width: 100%;
   height: 100%;
+  user-select: none;
 `;
 
 export default MenuCard;

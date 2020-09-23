@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { SpecialCard } from "../../Components/Card";
 import Heading from "../../Components/Heading";
@@ -13,8 +13,18 @@ const Offer = () => {
           topHeading="Todays special offer"
           bottomHeading="Chef Special"
         />
-        <Row style={{display:'flex', flexDirection:'row',justifyContent:'center', alignItems:'center'}}>
-          <Col style={{ padding: "0", height:'100%' }} className="d-none d-sm-block">
+        <Row
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Col
+            style={{ padding: "0", height: "100%" }}
+            className="d-none d-sm-block"
+          >
             <Img src="https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
           </Col>
           <Col
@@ -38,15 +48,17 @@ const Offer = () => {
 const Img = styled(Image)`
   max-width: 100%;
   min-width: 100% !important;
-  width:auto;
-  height:auto;
+  width: auto;
+  height: auto;
   padding: 0 !important;
   margin: 0 !important;
 `;
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  padding:5vw;
+  width: 100%;
+  max-width: 100%;
+  padding: 5vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

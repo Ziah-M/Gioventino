@@ -1,8 +1,6 @@
 import {
-  faGem,
-  faMotorcycle,
-  faPizzaSlice,
-  faCheck,
+  faCheck, faMotorcycle,
+  faPizzaSlice
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -37,6 +35,10 @@ const About = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-evenly",
+              maxWidth: "100%",
+              width: "100%",
+              padding: 0,
+              margin: 0,
             }}
           >
             <Row>
@@ -100,7 +102,7 @@ const SubHeading = styled.h2`
 
 const P = styled.p`
   text-align: center;
-  user-select:none;
+  user-select: none;
   color: ${(props) => props.theme.textDark};
 `;
 

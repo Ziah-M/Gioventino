@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Col as UnstyledCol, Row as UnstyledRow } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
-import { Link as UnstyledLink } from "react-scroll";
 
 const bgColor = "rgb(32,33,39)";
 
@@ -35,10 +35,10 @@ const SpecialCard = (props) => {
           <StyledText>{text}</StyledText>
         </Row>
         <Row>
-        <Link to="spy-reservation" smooth duration={1000}>
-          <Button>
-            <b>ORDER NOW -></b>
-          </Button>
+          <Link to="spy-reservation" smooth duration={1000}>
+            <Button>
+              <b>ORDER NOW -></b>
+            </Button>
           </Link>
         </Row>
         <VectorArt src="https://cdn.pixabay.com/photo/2012/04/13/10/52/pizza-31799_960_720.png" />

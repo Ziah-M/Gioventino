@@ -18,12 +18,12 @@ const CateringSlider = ({ testimonials = DEFUALT_IMAGES }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 6000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 6000,
     cssEase: "linear",
     focusOnSelect: false,
     touchMove: false,
@@ -46,7 +46,10 @@ const CateringSlider = ({ testimonials = DEFUALT_IMAGES }) => {
 };
 
 const StyledContainer = styled(Container)`
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
   height: 100%;
   position: absolute;
   z-index: 0;

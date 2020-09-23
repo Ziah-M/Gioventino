@@ -1,9 +1,9 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 import Button from "../../Components/Buttons/StyledButton";
 import { ThemedContainer } from "../../Themes/AnimatedImgTheme";
-import { Link as UnstyledLink } from "react-scroll";
 
 const Landing = () => {
   return (
@@ -66,6 +66,8 @@ const Content = ({
 
 const Box = styled.div`
   height: 100vh;
+  width: 100%;
+  max-width: 100%;
   position: relative;
 `;
 
@@ -76,6 +78,8 @@ const Wrapper = styled.div`
   align-items: center;
   max-height: 100vh;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
 `;
 
 //TODO

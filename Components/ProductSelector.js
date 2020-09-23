@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import { getProductCategories } from "../Data";
 
@@ -31,7 +30,8 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100vw;
+  width: 100vw;
+  user-select: none;
 `;
 
 const StyledButton = styled.button`
@@ -42,6 +42,7 @@ const StyledButton = styled.button`
   padding: 3px 4px;
   text-align: center;
   text-transform: uppercase;
+  user-select: none;
   font-size: 12px;
   width: 74px;
 

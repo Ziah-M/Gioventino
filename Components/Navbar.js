@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar as UnstyledNavbar, Nav } from "react-bootstrap";
+import { Nav, Navbar as UnstyledNavbar } from "react-bootstrap";
 import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 

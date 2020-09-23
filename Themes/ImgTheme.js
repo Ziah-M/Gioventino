@@ -1,14 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import DarkOverlay from "./DarkOverlay"
+import DarkOverlay from "./DarkOverlay";
 
-
-
-const ThemedContainer = props => {
+const ThemedContainer = (props) => {
   const height = props.height || "100vh"; // Optional height property
   return (
     <BgContainer {...props} height={height}>
-      <DarkOverlay height={height} transparency={0.6}>{props.children}</DarkOverlay>
+      <DarkOverlay height={height} transparency={0.6}>
+        {props.children}
+      </DarkOverlay>
     </BgContainer>
   );
 };
@@ -23,13 +23,16 @@ const BgContainer = styled.div`
   height: auto;
   margin: 0;
   padding: 0;
-  color: ${props => props.theme.lightText};
+  width: 100%;
+  max-width: 100%;
+  color: ${(props) => props.theme.lightText};
 
-  ${props =>
+  ${(props) =>
     css`
-background-image: url("${props.bgImg}");
-min-height:${props.height};
-`}
+      background-image: url("${props.bgImg}");
+      min-height: ${props.height};
+    `}
 `;
 
 export { ThemedContainer };
+

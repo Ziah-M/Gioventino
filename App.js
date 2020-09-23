@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Components/Header";
+import styled, { ThemeProvider } from "styled-components";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import Booking from "./Pages/Booking";
@@ -14,36 +14,50 @@ import Offer from "./Pages/Offer";
 import Popular from "./Pages/Popular";
 import TeamBio from "./Pages/TeamBio";
 import Testimonials from "./Pages/Testimonials";
-import styled, { ThemeProvider } from "styled-components";
-import { ThemedContainer } from "./Themes/ImgTheme";
 
 const theme = {
   primaryAccent: "#deb150",
   darkText: "white",
   lightText: "black",
-  dark: "black"
+  dark: "black",
 };
 
 const App = () => {
   return (
     //TODO -- maxWidth is a temporary fix to width overflowing the viewport
-    <GlobalStyles style={{ maxWidth: "98.7vw", overflow: "hidden" }}>
+    <GlobalStyles style={{ width: "100%", maxWidth: "100%" }}>
       <ThemeProvider theme={theme}>
         {/* <Header /> */}
-        {/* <Navbar /> */}
-        <Landing />
-        <About />
-        <Offer />
-        <Menu />
-        <Popular />
-        <Booking />
-        <TeamBio />
-        <Testimonials />
-        <Catering />
-        <Gallery />
-        <Events />
-        <Contact />
-        <Footer />
+        <Navbar />
+        <div id="spy-home">
+          <Landing />
+        </div>
+        <div id="spy-about">
+          <About />
+        </div>
+        <div id="spy-menu">
+          <Menu />
+          <Popular />
+        </div>
+        <div id="spy-special">
+          <Offer />
+          <TeamBio />
+        </div>
+        <div id="spy-gallery">
+          <Gallery />
+        </div>
+        <div id="spy-booking">
+          <Catering />
+          <Events />
+          <Testimonials />
+          <div id="spy-reservation">
+            <Booking />
+          </div>
+        </div>
+        <div id="spy-contact">
+          <Contact />
+          <Footer />
+        </div>
       </ThemeProvider>
     </GlobalStyles>
   );

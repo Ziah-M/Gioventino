@@ -1,9 +1,8 @@
 import {
   faFacebookF,
   faGooglePlusG,
-
-
-  faPinterest, faTwitter,
+  faPinterest,
+  faTwitter,
   faYoutube
 } from "@fortawesome/fontawesome-free-brands";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

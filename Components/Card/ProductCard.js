@@ -1,9 +1,9 @@
 import React from "react";
 import { Card as BootstrapCard } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 import UnstyledButton from "../Buttons/StyledButton";
 import AbstractCard from "./AbstractCard";
-import { Link as UnstyledLink } from "react-scroll";
 
 const ProductCard = (props) => {
   const { imageUrl, title = "ITALIAN PIZZA", text, price } = props;

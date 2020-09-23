@@ -1,9 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link as UnstyledLink } from "react-scroll";
 import styled from "styled-components";
 import Button from "../Buttons/StyledButton";
 import Heading from "../Heading";
-import { Link as UnstyledLink } from "react-scroll";
 
 const TEXT = `
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur maiores dolorum earum ipsa eveniet ipsam voluptate mollitia architecto. Eveniet, laborum.

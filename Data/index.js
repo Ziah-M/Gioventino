@@ -199,9 +199,9 @@ const CHEFS = [
     position: "Line Cook",
     imgUrl:
       "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-   overview:`Chef Alex has over 8 years of experience and has won multiple awards`,
-    
-      bio:
+    overview: `Chef Alex has over 8 years of experience and has won multiple awards`,
+
+    bio:
       "Line cooks are employed by many restaurants and prepare much of the food that comes out of the kitchen. They work under a head chef or sous chef, and each line cook is typically assigned a particular place on the line, such as the grill, stove or vegetable prep area.",
   },
   {
@@ -209,8 +209,8 @@ const CHEFS = [
     position: "Line Cook",
     imgUrl:
       "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      overview:`Chef Andrei has over 7 years of experience and has won multiple awards`,
-      bio:
+    overview: `Chef Andrei has over 7 years of experience and has won multiple awards`,
+    bio:
       "Line cooks are employed by many restaurants and prepare much of the food that comes out of the kitchen. They work under a head chef or sous chef, and each line cook is typically assigned a particular place on the line, such as the grill, stove or vegetable prep area.",
   },
   {
@@ -227,8 +227,8 @@ const CHEFS = [
     position: "Line Cook",
     imgUrl:
       "https://images.pexels.com/photos/887827/pexels-photo-887827.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      overview:`Chef Alex has over 8 years of experience and has won multiple awards`,
-      bio:
+    overview: `Chef Alex has over 8 years of experience and has won multiple awards`,
+    bio:
       "Line cooks are employed by many restaurants and prepare much of the food that comes out of the kitchen. They work under a head chef or sous chef, and each line cook is typically assigned a particular place on the line, such as the grill, stove or vegetable prep area.",
   },
   {
@@ -236,8 +236,8 @@ const CHEFS = [
     position: "Line Cook",
     imgUrl:
       "https://images.pexels.com/photos/2494654/pexels-photo-2494654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      overview:`Chef Andrei has over 7 years of experience and has won multiple awards`,
-      bio:
+    overview: `Chef Andrei has over 7 years of experience and has won multiple awards`,
+    bio:
       "Line cooks are employed by many restaurants and prepare much of the food that comes out of the kitchen. They work under a head chef or sous chef, and each line cook is typically assigned a particular place on the line, such as the grill, stove or vegetable prep area.",
   },
 ];

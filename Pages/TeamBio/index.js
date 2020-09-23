@@ -22,6 +22,8 @@ const TeamBio = () => {
 const Wrapper = styled.div`
   min-height: 100vh;
   padding: 0 10vw;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;

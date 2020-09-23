@@ -28,7 +28,7 @@ const Gallery = ({
   );
   return (
     <ThemedContainer>
-      <Wrapper id='gallery'>
+      <Wrapper id="gallery">
         <Heading
           topHeading="Your next favourite dish"
           bottomHeading="Gallery"
@@ -73,18 +73,20 @@ const Categories = styled.div`
 const Wrapper = styled.div`
   min-height: 100vh;
   padding: 5vw;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 `;
 
-const WrapperPictures=styled.div`
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100vw;
-`
+const WrapperPictures = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+`;
 
 const PicturesSection = styled.div`
   display: flex;
@@ -93,17 +95,17 @@ const PicturesSection = styled.div`
   align-items: center;
   justify-content: start;
   align-content: center;
-  justify-items:center;
+  justify-items: center;
   height: 600px;
-  @media (max-width:850px){
-    height:900px
+  @media (max-width: 850px) {
+    height: 900px;
   }
-  @media (max-width:650px){
-    flex-direction:row;
-    height:auto;
-    justify-content:center;
-    align-items:start;
-    justify-items:center;
+  @media (max-width: 650px) {
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
   }
 `;
 

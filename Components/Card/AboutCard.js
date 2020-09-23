@@ -47,7 +47,7 @@ const StyledCard = styled(Card)`
   height: 180px;
   position: relative;
   border: none !important;
-  user-select:none;
+  user-select: none;
 `;
 
 const StyledCardBodyUpper = styled(Card.Body)`

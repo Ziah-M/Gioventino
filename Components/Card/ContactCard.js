@@ -1,8 +1,7 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Heading from "../Heading";
-import { Row, Col } from "react-bootstrap";
 
 const TestimonialCard = ({}) => {
   return (
@@ -45,13 +44,12 @@ const TestimonialCard = ({}) => {
 // BOOTSTRAP STYLES
 const StyledText = styled(Card.Text)`
   color: #a19fa0;
- 
+
   font-family: "Montserrat", sans-serif;
   margin: 0 20px;
 `;
 
 const StyledTextRow = styled(Row)`
-  
   margin: 10px 0;
 `;
 
