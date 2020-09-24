@@ -42,6 +42,10 @@ const InnerContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   width: auto;
+  @media (max-width: 450px) {
+    transform: scale(0.8);
+  }
+
 `;
 
 const Wrapper = styled.div`

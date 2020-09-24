@@ -42,6 +42,7 @@ const InputGroup = styled(UnstyledInputGroup)`
   outline: none !important;
   width: 50vw;
   max-width: 500px;
+  margin: 20px 0;
 `;
 
 const Control = styled(FormControl)`
@@ -66,6 +67,7 @@ const InputIcon = styled(InputGroup.Text)`
 `;
 
 const Text = styled.p`
+  margin: 20px 0;
   text-align: center;
   max-width: 75vw;
   height: auto;
@@ -91,6 +93,7 @@ const SocialButtonsGroup = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 20px 0;
 `;
 
 export default Footer;

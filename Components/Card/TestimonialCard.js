@@ -37,6 +37,10 @@ const TestimonialCard = (props) => {
 const Wrapper = styled.div`
   width: 300px;
   height: 300px;
+
+  @media (max-width: 450px) {
+    transform: scale(0.7);
+  }
 `;
 
 const Col = styled.div``;

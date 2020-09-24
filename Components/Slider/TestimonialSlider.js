@@ -18,6 +18,7 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     centerMode: true,
+    centerPadding:'20px',
 
     responsive: [
       {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   Col as UnstyledCol,
   Container,
-  Row as UnstyledRow
+  Row as UnstyledRow,
 } from "react-bootstrap";
 import styled from "styled-components";
 import MenuCard from "../../Components/Card/MenuCard";
@@ -20,21 +20,7 @@ const Menu = ({ productCategories = getProductCategories() }) => {
 
   return (
     <ThemedContainer>
-      <Container
-        id="menu"
-        fluid
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "120vh",
-          maxWidth: "100%",
-          width: "100%",
-          padding: 0,
-          margin: 0,
-        }}
-      >
+      <Wrapper id="menu" fluid>
         <Row>
           <Col xs={12} className="d-flex justify-content-center">
             <Heading topHeading="Delicious Meals" bottomHeading="Menu" />
@@ -60,10 +46,24 @@ const Menu = ({ productCategories = getProductCategories() }) => {
             <ProductMenu selectedCategory={selectedCategory} />
           </Col>
         </Row>
-      </Container>
+      </Wrapper>
     </ThemedContainer>
   );
 };
+
+const Wrapper = styled.div`
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh;
+
+  @media (max-width: 450px) {
+    transform: scale(0.9);
+  }
+`;
 
 const Row = styled(UnstyledRow)`
   margin: 0;

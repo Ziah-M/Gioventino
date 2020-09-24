@@ -32,7 +32,12 @@ const H1 = styled.h1`
   font-family: "Montserrat", sans-serif;
   margin: 0;
   user-select: none;
+
+  @media (max-width: 450px) {
+    font-size: 45px;
+  }
 `;
+
 const Heading = ({ topHeading = "", bottomHeading = "" }) => {
   return (
     <StyledContainer fluid>

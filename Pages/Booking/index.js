@@ -71,7 +71,7 @@ const Booking = () => {
                     <Form.Row
                       style={{ dispaly: "flex", justifyContent: "center" }}
                     >
-                      <Button>BOOK TABLE -></Button>
+                      <Button>BOOK TABLE {'-\>'}</Button>
                     </Form.Row>
                   </StyledForm>
                 </StyledInnerContainer>
@@ -102,6 +102,10 @@ const StyledInnerContainer = styled(Container)`
 const StyledCard = styled(Card)`
   padding: 10px;
   background: ${(props) => props.theme.primaryAccent};
+
+  @media (max-width: 450px) {
+    transform: scale(0.8);
+  }
 `;
 
 const StyledCardBody = styled(Card.Body)`

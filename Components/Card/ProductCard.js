@@ -22,7 +22,7 @@ const ProductCard = (props) => {
             <Text>{text}</Text>
             <Wrap>
           <Link to="spy-reservation" smooth duration={500}>
-              <Button>Order Now -></Button>
+              <Button>Order Now -{`>`}</Button>
               </Link>
             </Wrap>
           </TextArea>

@@ -3,7 +3,7 @@ import {
   faGooglePlusG,
   faPinterest,
   faTwitter,
-  faYoutube
+  faYoutube,
 } from "@fortawesome/fontawesome-free-brands";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -19,6 +19,10 @@ const IconContainer = styled.div`
   color: #a8a8a8;
   width: 45px;
   height: 45px;
+  @media (max-width: 450px) {
+    width: 40px;
+    height: 40px;
+  }
   margin: 0px 5px;
   text-align: center;
 
@@ -37,14 +41,16 @@ const SocialButton = ({ icon }) => (
 
 const SocialButtons = () => {
   return (
-    <>
+    <Wrapper>
       <SocialButton icon={faFacebookF} />
       <SocialButton icon={faTwitter} />
       <SocialButton icon={faGooglePlusG} />
       <SocialButton icon={faYoutube} />
       <SocialButton icon={faPinterest} />
-    </>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div``;
 
 export default SocialButtons;

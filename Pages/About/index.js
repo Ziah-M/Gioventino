@@ -1,6 +1,7 @@
 import {
-  faCheck, faMotorcycle,
-  faPizzaSlice
+  faCheck,
+  faMotorcycle,
+  faPizzaSlice,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -23,7 +24,7 @@ const sideImage =
 const About = () => {
   return (
     <ThemedContainer>
-      <Container id="about" fluid style={{ minHeight: "100vh" }}>
+      <Wrapper id="about">
         <Row noGutters>
           <Col
             md={8}
@@ -62,32 +63,44 @@ const About = () => {
               </Col>
             </Row>
 
-            <Row>
-              <Col xs={6} sm={4}>
+            <Row noGutters>
+              <CardsContainer>
                 <AboutCard text="Free Delivery">
                   <FontAwesomeIcon icon={faMotorcycle} />
                 </AboutCard>
-              </Col>
-              <Col xs={6} sm={4}>
                 <AboutCard text="Covid Safe">
                   <FontAwesomeIcon icon={faCheck} />
                 </AboutCard>
-              </Col>
-              <Col sm={4} className="d-none d-sm-block">
-                <AboutCard text="Fresh Ingredients">
+                <AboutCard text="Fresh Ingredients" className="d-sm-hide">
                   <FontAwesomeIcon icon={faPizzaSlice} />
                 </AboutCard>
-              </Col>
+              </CardsContainer>
             </Row>
           </Col>
           <Col className="d-none d-md-block p-0" md={4} lg={5}>
             <Img src={sideImage} />
           </Col>
         </Row>
-      </Container>
+      </Wrapper>
     </ThemedContainer>
   );
 };
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+  width: 100%;
+  height: auto;
+  @media (max-width: 450px) {
+    transform: scale(0.9);
+  }
+`;
+
+const CardsContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`;
 
 const Img = styled.img`
   height: 100%;
@@ -98,11 +111,13 @@ const SubHeading = styled.h2`
   text-align: center;
   user-select: none;
   color: ${(props) => props.theme.primaryAccent};
+  margin: 20px;
 `;
 
 const P = styled.p`
   text-align: center;
   user-select: none;
+  margin: 20px 20px;
   color: ${(props) => props.theme.textDark};
 `;
 

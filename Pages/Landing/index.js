@@ -51,12 +51,12 @@ const Content = ({
       <Row noGutters>
         <Col xs={6}>
           <Link to="spy-reservation" smooth duration={1000}>
-            <StyledButton>BOOK TABLE -></StyledButton>
+            <StyledButton>BOOK TABLE -{`>`}</StyledButton>
           </Link>
         </Col>
         <Col xs={6}>
           <Link to="spy-menu" smooth duration={1000}>
-            <StyledButton>VIEW MENU -></StyledButton>
+            <StyledButton>VIEW MENU -{`>`}</StyledButton>
           </Link>
         </Col>
       </Row>
@@ -117,6 +117,7 @@ const Heading = styled.h2`
   @media (max-width: 768px) {
     font-size: 40px;
   }
+
   font-weight: normal;
   line-height: 1;
   color: ${(props) => props.theme.primaryAccent};
@@ -132,6 +133,9 @@ const BrandName = styled.h1`
   font-size: 70px;
   @media (max-width: 768px) {
     font-size: 50px;
+  }
+  @media (max-width: 400px) {
+    font-size: 45px;
   }
   line-height: 1.2;
   text-transform: uppercase;

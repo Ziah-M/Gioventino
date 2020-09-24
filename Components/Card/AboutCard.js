@@ -7,9 +7,9 @@ const bgColorUpper = "#202127";
 const bgColorHover = "#18191E";
 const borderColor = "#4C4C51";
 
-const AboutCard = ({ text = "PLACEHOLDER", children }) => {
+const AboutCard = ({ text = "PLACEHOLDER", children, className }) => {
   return (
-    <StyledCard>
+    <StyledCard className={className}>
       <StyledCardBodyUpper>
         <StyledCardIcon>{children}</StyledCardIcon>
       </StyledCardBodyUpper>
@@ -41,10 +41,23 @@ const StyledCardIcon = styled(Card.Text)`
 
 // BOOTSTRAP STYLES
 const StyledCard = styled(Card)`
+
+
   min-width: 150px;
   min-height: 200px;
   width: 180px;
   height: 180px;
+  @media (max-width: 400px) {
+    width: 150px;
+    height: 150px;
+  }
+
+  &.d-sm-hide{
+    @media (max-width:600px){
+      display:none
+    }
+  }
+
   position: relative;
   border: none !important;
   user-select: none;

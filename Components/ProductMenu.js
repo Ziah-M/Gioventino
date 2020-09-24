@@ -22,7 +22,7 @@ const ProductMenu = ({
               <Col style={{ marginLeft: "5%" }}>
                 <Row>
                   <ProduceItemHeading>
-                    {product.name} &nbsp;-> ${product.price}
+                    {product.name} &nbsp;-{`>`} ${product.price}
                   </ProduceItemHeading>
                 </Row>
                 <Ingredients>{product.ingredients}</Ingredients>

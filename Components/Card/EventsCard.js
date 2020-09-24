@@ -38,7 +38,7 @@ const EventsCard = (props) => {
           <StyledText>{text}</StyledText>
           <Link to="spy-reservation" smooth duration={1000}>
             <Button style={{ marginBottom: "20px" }}>
-              <b>BOOK TICKET -></b>
+              <b>BOOK TICKET -{`>`}</b>
             </Button>
           </Link>
         </StyledCardBody>
@@ -65,6 +65,10 @@ const StyledCard = styled(Card)`
   width: 300px;
   height: 400px;
   border: none;
+
+  @media (max-width: 450px) {
+    transform: scale(0.8);
+  }
 `;
 
 const Body = styled.div`

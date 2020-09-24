@@ -19,7 +19,7 @@ const TestimonialCard = ({ text = TEXT }) => {
           <StyledText>{text}</StyledText>
           <Link to="spy-reservation" smooth duration={500}>
             <Button>
-              <b>ORDER NOW -></b>
+              <b>ORDER NOW -{`>`}</b>
             </Button>
           </Link>
         </Inner>
@@ -38,7 +38,11 @@ const StyledText = styled(Card.Text)`
 const Wrapper = styled.div`
   width: 320px;
   height: 500px;
-  position:absolute;
+
+  position: absolute;
+  @media (max-width: 450px) {
+    transform: scale(0.8);
+  }
 `;
 
 const Outer = styled.div`

@@ -37,7 +37,7 @@ const SpecialCard = (props) => {
         <Row>
           <Link to="spy-reservation" smooth duration={1000}>
             <Button>
-              <b>ORDER NOW -></b>
+              <b>ORDER NOW -{`>`}</b>
             </Button>
           </Link>
         </Row>
@@ -102,6 +102,10 @@ const StyledCard = styled(Card)`
 
   background-color: #202127;
   box-shadow: 0px 2px 48px 9px rgba(0, 0, 0, 0.43);
+
+  @media (max-width: 450px) {
+    transform: scale(0.8);
+  }
 `;
 
 const StyledCardBody = styled(Card.Body)`
