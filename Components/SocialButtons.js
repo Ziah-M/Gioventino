@@ -4,10 +4,10 @@ import {
   faPinterest,
   faTwitter,
   faYoutube,
-} from "@fortawesome/fontawesome-free-brands";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import styled from "styled-components";
+} from '@fortawesome/fontawesome-free-brands'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
+import styled from 'styled-components'
 
 const IconContainer = styled.div`
   border-radius: 50%;
@@ -31,26 +31,24 @@ const IconContainer = styled.div`
     background: #deb150;
     border: 1px solid #deb150;
   }
-`;
+`
 
 const SocialButton = ({ icon }) => (
   <IconContainer>
     <FontAwesomeIcon icon={icon} />
   </IconContainer>
-);
+)
 
-const SocialButtons = () => {
-  return (
-    <Wrapper>
-      <SocialButton icon={faFacebookF} />
-      <SocialButton icon={faTwitter} />
-      <SocialButton icon={faGooglePlusG} />
-      <SocialButton icon={faYoutube} />
-      <SocialButton icon={faPinterest} />
-    </Wrapper>
-  );
-};
+const SocialButtons = () => (
+  <Wrapper>
+    <SocialButton icon={faFacebookF} />
+    <SocialButton icon={faTwitter} />
+    <SocialButton icon={faGooglePlusG} />
+    <SocialButton icon={faYoutube} />
+    <SocialButton icon={faPinterest} />
+  </Wrapper>
+)
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div``
 
-export default SocialButtons;
+export default SocialButtons

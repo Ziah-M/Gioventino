@@ -1,12 +1,12 @@
-import React from "react";
-import { Card as BootstrapCard } from "react-bootstrap";
-import { Link as UnstyledLink } from "react-scroll";
-import styled from "styled-components";
-import UnstyledButton from "../Buttons/StyledButton";
-import AbstractCard from "./AbstractCard";
+import React from 'react'
+import { Card as BootstrapCard } from 'react-bootstrap'
+import { Link as UnstyledLink } from 'react-scroll'
+import styled from 'styled-components'
+import UnstyledButton from '../Buttons/StyledButton'
+import AbstractCard from './AbstractCard'
 
 const ProductCard = (props) => {
-  const { imageUrl, title = "ITALIAN PIZZA", text, price } = props;
+  const { imageUrl, title = 'ITALIAN PIZZA', text, price } = props
   return (
     <Card className="border-black">
       <StyledCardImg src={imageUrl} />
@@ -21,22 +21,22 @@ const ProductCard = (props) => {
             </Subtitle>
             <Text>{text}</Text>
             <Wrap>
-          <Link to="spy-reservation" smooth duration={500}>
-              <Button>Order Now -{`>`}</Button>
+              <Link to="spy-reservation" smooth duration={500}>
+                <Button>Order Now -{`>`}</Button>
               </Link>
             </Wrap>
           </TextArea>
         </ContentWrapper>
       </Inner>
     </Card>
-  );
-};
+  )
+}
 
 const Card = styled(AbstractCard)`
   height: 400px;
   width: 225px;
   margin: 30px;
-`;
+`
 
 const Inner = styled.div`
   width: 100%;
@@ -48,13 +48,13 @@ const Inner = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const StyledCardImg = styled.img`
   height: 45%;
   width: 100%;
   object-fit: cover;
-`;
+`
 
 const Price = styled.div`
   width: 40px;
@@ -73,14 +73,14 @@ const Price = styled.div`
   top: -15px; // should be half of height
   left: 50%;
   transform: translate(-50%);
-`;
+`
 
 const ContentWrapper = styled.div`
   width: 100%;
   max-height: 100%;
   height: 100%;
   padding: 10% 6%;
-`;
+`
 
 const TextArea = styled.div`
   width: 100%;
@@ -90,21 +90,21 @@ const TextArea = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Subtitle = styled(BootstrapCard.Subtitle)`
   text-align: center;
   text-transform: uppercase;
   color: black;
   font-size: 125%;
-`;
+`
 
 const Text = styled(BootstrapCard.Text)`
   color: black;
   padding: 5%;
   font-size: 14px;
   text-align: center;
-`;
+`
 
 const Button = styled(UnstyledButton)`
   border: 2px solid black;
@@ -124,7 +124,7 @@ const Button = styled(UnstyledButton)`
     background-color: black;
     border: 2px solid black !important;
   }
-`;
+`
 
 const Wrap = styled.div`
   width: 100%;
@@ -132,9 +132,8 @@ const Wrap = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`;
+`
 
-const Link = styled(UnstyledLink)``;
+const Link = styled(UnstyledLink)``
 
-
-export default ProductCard;
+export default ProductCard

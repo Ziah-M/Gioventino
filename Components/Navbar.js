@@ -1,90 +1,88 @@
-import React from "react";
-import { Nav, Navbar as UnstyledNavbar } from "react-bootstrap";
-import { Link as UnstyledLink } from "react-scroll";
-import styled from "styled-components";
+import React from 'react'
+import { Nav, Navbar as UnstyledNavbar } from 'react-bootstrap'
+import { Link as UnstyledLink } from 'react-scroll'
+import styled from 'styled-components'
 
-const TasteNavbar = () => {
-  return (
-    <Navbar expand="md">
-      <Navbar.Brand />
+const TasteNavbar = () => (
+  <Navbar expand="md">
+    <Navbar.Brand />
+
+    <Link
+      activeClass="active"
+      to="spy-home"
+      spy
+      smooth
+      offset={-50}
+      duration={700}
+    >
+      Home
+    </Link>
+
+    <UnstyledNavbar.Collapse>
+      <Link
+        activeClass="active"
+        to="spy-about"
+        spy
+        smooth
+        offset={0}
+        duration={700}
+      >
+        About
+      </Link>
 
       <Link
         activeClass="active"
-        to="spy-home"
-        spy={true}
-        smooth={true}
-        offset={-50}
+        to="spy-menu"
+        spy
+        smooth
+        offset={0}
+        duration={1000}
+      >
+        Menu
+      </Link>
+      <Link
+        activeClass="active"
+        to="spy-special"
+        spy
+        smooth
+        offset={0}
         duration={700}
       >
-        Home
+        Chef Special
       </Link>
-
-      <UnstyledNavbar.Collapse>
-        <Link
-          activeClass="active"
-          to="spy-about"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={700}
-        >
-          About
-        </Link>
-
-        <Link
-          activeClass="active"
-          to="spy-menu"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-        >
-          Menu
-        </Link>
-        <Link
-          activeClass="active"
-          to="spy-special"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={700}
-        >
-          Chef Special
-        </Link>
-        <Link
-          activeClass="active"
-          to="spy-gallery"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-        >
-          Gallery
-        </Link>
-        <Link
-          activeClass="active"
-          to="spy-booking"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-        >
-          Events
-        </Link>
-        <Link
-          activeClass="active"
-          to="spy-contact"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-        >
-          Contact
-        </Link>
-      </UnstyledNavbar.Collapse>
-    </Navbar>
-  );
-};
+      <Link
+        activeClass="active"
+        to="spy-gallery"
+        spy
+        smooth
+        offset={0}
+        duration={1000}
+      >
+        Gallery
+      </Link>
+      <Link
+        activeClass="active"
+        to="spy-booking"
+        spy
+        smooth
+        offset={0}
+        duration={1000}
+      >
+        Events
+      </Link>
+      <Link
+        activeClass="active"
+        to="spy-contact"
+        spy
+        smooth
+        offset={0}
+        duration={1000}
+      >
+        Contact
+      </Link>
+    </UnstyledNavbar.Collapse>
+  </Navbar>
+)
 
 const Link = styled(UnstyledLink)`
   color: white;
@@ -106,7 +104,7 @@ const Link = styled(UnstyledLink)`
     /* color: white !important; */
     color: black !important;
   }
-`;
+`
 
 const Navbar = styled(UnstyledNavbar)`
   /* background:rgba(255,255,255,0.2); */
@@ -119,8 +117,8 @@ const Navbar = styled(UnstyledNavbar)`
   top: 0;
   left: 0;
   z-index: 9000;
-`;
+`
 
-const NavLink = styled(Nav.Link)``;
+const NavLink = styled(Nav.Link)``
 
-export default TasteNavbar;
+export default TasteNavbar

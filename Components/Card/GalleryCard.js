@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Card, Container } from "react-bootstrap";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react'
+import { Card, Container } from 'react-bootstrap'
+import styled, { css } from 'styled-components'
 
-const bgColor = "${props => props.theme.primaryAccent}";
+const bgColor = '${props => props.theme.primaryAccent}'
 
 // IMPLEMENTATION:
 // Container has bg Image
@@ -14,12 +14,12 @@ const bgColor = "${props => props.theme.primaryAccent}";
 // TODO -- implementing transition (ease) with styled components
 
 const GalleryCard = (props) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
   const {
-    imageUrl = "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    heading = "Burrito",
-    subheading = "Lunch",
-  } = props;
+    imageUrl = 'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    heading = 'Burrito',
+    subheading = 'Lunch',
+  } = props
   return (
     <StyledContainer
       fluid
@@ -36,11 +36,11 @@ const GalleryCard = (props) => {
         </StyledCardBody>
       </StyledCard>
     </StyledContainer>
-  );
-};
+  )
+}
 
 // TODO - TEMPORARY JUST FOR TESTING PURPOSES
-const WIDTH_AND_HEIGHT = "250px";
+const WIDTH_AND_HEIGHT = '250px'
 
 const StyledContainer = styled(Container)`
   max-width: ${WIDTH_AND_HEIGHT};
@@ -62,7 +62,7 @@ const StyledContainer = styled(Container)`
     css`
       background-image: url(${props.imageurl});
     `}
-`;
+`
 
 const StyledTitle = styled(Card.Title)`
   color: white;
@@ -70,7 +70,7 @@ const StyledTitle = styled(Card.Title)`
   font-size: 2em;
   text-align: center;
   user-select: none;
-`;
+`
 
 const PseudoButton = styled.div`
   color: white;
@@ -84,7 +84,7 @@ const PseudoButton = styled.div`
   justify-content: center;
   align-items: center;
   user-select: none;
-`;
+`
 
 // BOOTSTRAP STYLES
 const StyledCard = styled(Card)`
@@ -99,11 +99,11 @@ const StyledCard = styled(Card)`
   user-select: none;
 
   ${(props) =>
-    props.show==='true' &&
+    props.show === 'true' &&
     css`
       display: block;
     `}
-`;
+`
 
 const StyledCardBody = styled(Card.Body)`
   display: grid;
@@ -116,7 +116,7 @@ const StyledCardBody = styled(Card.Body)`
   justify-items: center;
   align-items: center;
   user-select: none;
-`;
+`
 
 const StyledSubtitle = styled(Card.Subtitle)`
   text-align: center;
@@ -125,6 +125,6 @@ const StyledSubtitle = styled(Card.Subtitle)`
   margin: 0;
   color: white;
   user-select: none;
-`;
+`
 
-export default GalleryCard;
+export default GalleryCard

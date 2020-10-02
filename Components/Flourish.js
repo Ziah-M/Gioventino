@@ -1,5 +1,5 @@
-const FLOURISH_GOLD = "http://i.imgur.com/2yP4WUN.png";
-const FLOURISH_WHITE = "http://i.imgur.com/fHE8g4y.png";
+const FLOURISH_GOLD = 'http://i.imgur.com/2yP4WUN.png'
+const FLOURISH_WHITE = 'http://i.imgur.com/fHE8g4y.png'
 
 /* --- DEPRECATED --- THIS LOOKS CLEANER WITHOUT THE FLOURISH
 

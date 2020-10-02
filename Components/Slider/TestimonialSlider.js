@@ -1,10 +1,10 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Slider from "react-slick";
-import TestimonialCard from "../Card/TestimonialCard";
-import "./sliderOverride.css";
+import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import Slider from 'react-slick'
+import TestimonialCard from '../Card/TestimonialCard'
+import './sliderOverride.css'
 
-const DEFUALT_TESTIMONIALS = ["", "", "", ""];
+const DEFUALT_TESTIMONIALS = ['', '', '', '']
 
 const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
   const settings = {
@@ -18,7 +18,7 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     centerMode: true,
-    centerPadding:'20px',
+    centerPadding: '20px',
 
     responsive: [
       {
@@ -46,23 +46,26 @@ const TestimonialSlider = ({ testimonials = DEFUALT_TESTIMONIALS }) => {
         },
       },
     ],
-  };
+  }
 
   return (
     <>
-      <Container fluid className="p-0" style={{ width: "80vw" }}>
+      <Container fluid className="p-0" style={{ width: '80vw' }}>
         <Row noGutters>
           <Col xs={12}>
             <Slider {...settings}>
               {testimonials.map((testimonial, index) => (
-                <TestimonialCard testimonial={testimonial} key={`testimonial-slider-${index}`} />
+                <TestimonialCard
+                  testimonial={testimonial}
+                  key={`testimonial-slider-${index}`}
+                />
               ))}
             </Slider>
           </Col>
         </Row>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default TestimonialSlider;
+export default TestimonialSlider

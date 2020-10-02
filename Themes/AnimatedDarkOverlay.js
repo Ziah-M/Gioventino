@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from 'styled-components'
 
-//Animation for making the overlay pulse for the cover page
+// Animation for making the overlay pulse for the cover page
 const pulse = keyframes`
 from {
   background: rgba(0, 0, 0, 0.6);
@@ -8,7 +8,7 @@ from {
 to {
   background: rgba(0, 0, 0, 0.2);
 }
-`;
+`
 
 const DarkOverlay = styled.div`
   background-size: cover;
@@ -27,6 +27,6 @@ const DarkOverlay = styled.div`
     css`
       min-height: ${props.height};
     `}
-`;
+`
 
-export default DarkOverlay;
+export default DarkOverlay

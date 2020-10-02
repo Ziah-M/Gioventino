@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import { getProductCategories } from "../Data";
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
+import { getProductCategories } from '../Data'
 
 const ProductCategoryFilter = ({
   categories = getProductCategories(),
   setCategory = (f) => f,
 }) => {
-  const [selected, setSelected] = useState(categories[2]);
+  const [selected, setSelected] = useState(categories[2])
 
   const handleClick = (category) => {
-    setSelected(category);
-    setCategory(category);
-  };
+    setSelected(category)
+    setCategory(category)
+  }
   return (
     <StyledContainer>
       {categories.map((category, index) => (
@@ -24,17 +24,17 @@ const ProductCategoryFilter = ({
         </StyledButton>
       ))}
     </StyledContainer>
-  );
-};
+  )
+}
 
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   user-select: none;
-`;
+`
 
 const StyledButton = styled.button`
   background-color: rgba(255, 255, 255, 0.2);
@@ -86,6 +86,6 @@ const StyledButton = styled.button`
       }
       `}
     `}
-`;
+`
 
-export default ProductCategoryFilter;
+export default ProductCategoryFilter

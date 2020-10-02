@@ -1,5 +1,5 @@
-import { Button } from "react-bootstrap";
-import styled, { css } from "styled-components";
+import { Button } from 'react-bootstrap'
+import styled, { css } from 'styled-components'
 
 // TODO --- get hover styles from ProductCard
 // TODO --- create a LIGHT version and a DARK version
@@ -39,12 +39,12 @@ const StyledButton = styled(Button)`
             `}
           }
         `}
-`;
+`
 
 const ButtonDark = styled(StyledButton)`
   background: ${(props) => props.theme.dark};
   color: ${(props) => props.theme.darkText};
-`;
+`
 
 const ButtonAlt = styled(StyledButton)`
   border: 2px solid black;
@@ -53,16 +53,15 @@ const ButtonAlt = styled(StyledButton)`
   color: ${(props) => props.theme.lightText};
   &:hover {
     color: ${(props) =>
-      props.textHover ? props.textHover : "white !important"};
+      props.textHover ? props.textHover : 'white !important'};
     background-color: black;
     ${css`
       transition: 400ms ease-in-out background;
       transition: 400ms ease color;
     `}
   }
-`;
+`
 
-export default StyledButton;
+export default StyledButton
 
-export { ButtonDark, StyledButton, ButtonAlt };
-
+export { ButtonDark, StyledButton, ButtonAlt }

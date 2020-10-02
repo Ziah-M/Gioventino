@@ -1,21 +1,21 @@
-import React from "react";
-import styled, { css } from "styled-components";
-import DarkOverlay from "./DarkOverlay";
+import React from 'react'
+import styled, { css } from 'styled-components'
+import DarkOverlay from './DarkOverlay'
 
-const texture = `https://images.pexels.com/photos/966927/pexels-photo-966927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
+const texture = `https://images.pexels.com/photos/966927/pexels-photo-966927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`
 
 const ThemedContainer = (props) => {
-  const height = props.height || "100vh"; // Optional height property
+  const height = props.height || '100vh' // Optional height property
   return (
     <BgContainer {...props}>
       <DarkOverlay transparency={0.8} height={height}>
         {props.children}
       </DarkOverlay>
     </BgContainer>
-  );
-};
+  )
+}
 
-export default ThemedContainer;
+export default ThemedContainer
 
 const BgContainer = styled.div`
   background-size: cover;
@@ -31,9 +31,8 @@ const BgContainer = styled.div`
 
   ${(props) =>
     css`
-      background-image: url("${texture}");
+      background-image: url('${texture}');
     `}
-`;
+`
 
-export { ThemedContainer };
-
+export { ThemedContainer }

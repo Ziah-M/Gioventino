@@ -1,10 +1,10 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import { Link as UnstyledLink } from "react-scroll";
-import styled from "styled-components";
-import { ButtonAlt as Button } from "../Buttons/StyledButton";
+import React from 'react'
+import { Card } from 'react-bootstrap'
+import { Link as UnstyledLink } from 'react-scroll'
+import styled from 'styled-components'
+import { ButtonAlt as Button } from '../Buttons/StyledButton'
 
-const bgColor = "#deb150";
+const bgColor = '#deb150'
 
 // NOTE --- USING OUTLINE IN THIS ONE
 // FOR THE BORDER IN THE DATE OVERLAY
@@ -13,12 +13,12 @@ const bgColor = "#deb150";
 
 const EventsCard = (props) => {
   const {
-    imageUrl = "https://images.pexels.com/photos/16408/pexels-photo.jpg?cs=srgb&dl=bar-drinks-party-champagne-16408.jpg&fm=jpg",
-    title = "WINE TASTING",
-    text = "Lorem ipsum placeholder text",
-    month = "April",
-    date = "9",
-  } = props;
+    imageUrl = 'https://images.pexels.com/photos/16408/pexels-photo.jpg?cs=srgb&dl=bar-drinks-party-champagne-16408.jpg&fm=jpg',
+    title = 'WINE TASTING',
+    text = 'Lorem ipsum placeholder text',
+    month = 'April',
+    date = '9',
+  } = props
   return (
     <StyledCard>
       <ImgWrapper>
@@ -37,7 +37,7 @@ const EventsCard = (props) => {
           <StyledSubtitle>{title}</StyledSubtitle>
           <StyledText>{text}</StyledText>
           <Link to="spy-reservation" smooth duration={1000}>
-            <Button style={{ marginBottom: "20px" }}>
+            <Button style={{ marginBottom: '20px' }}>
               <b>BOOK TICKET -{`>`}</b>
             </Button>
           </Link>
@@ -45,8 +45,8 @@ const EventsCard = (props) => {
       </Body>
       <StyledBorder />
     </StyledCard>
-  );
-};
+  )
+}
 
 // THIS ELEMENT IS PURELY STYLISTIC
 const StyledBorder = styled.div`
@@ -56,7 +56,7 @@ const StyledBorder = styled.div`
   height: 92%;
   width: 92%;
   border: 2px solid #303035;
-`;
+`
 
 // BOOTSTRAP STYLES
 const StyledCard = styled(Card)`
@@ -69,14 +69,14 @@ const StyledCard = styled(Card)`
   @media (max-width: 450px) {
     transform: scale(0.8);
   }
-`;
+`
 
 const Body = styled.div`
   height: 40%;
   width: 100%;
   padding: 5%;
   position: relative;
-`;
+`
 
 const StyledCardBody = styled.div`
   display: flex;
@@ -85,29 +85,29 @@ const StyledCardBody = styled.div`
   align-items: center;
   z-index: 1;
   height: 100%;
-`;
+`
 
 const StyledCardImg = styled(Card.Img)`
   width: 100%;
   height: 100%;
-`;
+`
 
 const StyledSubtitle = styled(Card.Subtitle)`
   text-align: center;
   margin-top: 2%;
   text-transform: uppercase;
   color: black;
-`;
+`
 
 const StyledText = styled(Card.Text)`
   color: black;
-`;
+`
 
 const ImgWrapper = styled.div`
   width: 100%;
   height: 60%;
   position: relative;
-`;
+`
 
 const Date = styled.div`
   width: 60px;
@@ -121,7 +121,7 @@ const Date = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-`;
+`
 
 const Border = styled.div`
   width: 100%;
@@ -130,8 +130,8 @@ const Border = styled.div`
   border: 1px solid black;
   z-index: 5;
   transform: scale(0.9);
-`;
+`
 
-const Link = styled(UnstyledLink)``;
+const Link = styled(UnstyledLink)``
 
-export default EventsCard;
+export default EventsCard

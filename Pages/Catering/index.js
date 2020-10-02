@@ -1,18 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { CateringCard } from "../../Components/Card";
-import CateringSlider from "../../Components/Slider/CateringSlider";
+import React from 'react'
+import styled from 'styled-components'
+import { CateringCard } from '../../Components/Card'
+import CateringSlider from '../../Components/Slider/CateringSlider'
 
 // TODO --- HEADING GOES INSIDE THE CATERING CARD
 
-const Catering = () => {
-  return (
-    <Wrapper>
-      <CateringSlider />
-      <CateringCard />
-    </Wrapper>
-  );
-};
+const Catering = () => (
+  <Wrapper>
+    <CateringSlider />
+    <CateringCard />
+  </Wrapper>
+)
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,6 +22,6 @@ const Wrapper = styled.div`
   max-width: 100%;
   width: 100%;
   position: relative;
-`;
+`
 
-export default Catering;
+export default Catering

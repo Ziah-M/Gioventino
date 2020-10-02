@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 const DarkOverlay = styled.div`
   background: rgba(0, 0, 0, 0.6);
@@ -20,6 +20,6 @@ const DarkOverlay = styled.div`
       min-height: ${props.height};
       background: rgba(0, 0, 0, ${props.transparency || 0.6});
     `}
-`;
+`
 
-export default DarkOverlay;
+export default DarkOverlay

@@ -1,14 +1,14 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import styled from "styled-components";
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import styled from 'styled-components'
 
-//TODO --- Find a better flourish for under header
+// TODO --- Find a better flourish for under header
 
 const H2 = styled.h2`
   text-align: center;
   box-sizing: border-box;
   outline: none !important;
-  font-family: "Allura", cursive;
+  font-family: 'Allura', cursive;
   font-size: 45px;
   font-weight: normal;
   line-height: 1;
@@ -16,7 +16,7 @@ const H2 = styled.h2`
   margin: 0;
   padding: 0;
   user-select: none;
-`;
+`
 
 const H1 = styled.h1`
   text-align: center;
@@ -29,26 +29,24 @@ const H1 = styled.h1`
   font-weight: 700;
   position: relative;
   display: block;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   user-select: none;
 
   @media (max-width: 450px) {
     font-size: 45px;
   }
-`;
+`
 
-const Heading = ({ topHeading = "", bottomHeading = "" }) => {
-  return (
-    <StyledContainer fluid>
-      <H2>{topHeading}</H2>
-      <H1>{bottomHeading}</H1>
-    </StyledContainer>
-  );
-};
+const Heading = ({ topHeading = '', bottomHeading = '' }) => (
+  <StyledContainer fluid>
+    <H2>{topHeading}</H2>
+    <H1>{bottomHeading}</H1>
+  </StyledContainer>
+)
 
 const StyledContainer = styled(Container)`
   margin: 0px 0px 0px 0px;
-`;
+`
 
-export default Heading;
+export default Heading

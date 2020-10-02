@@ -1,19 +1,19 @@
-import React from "react";
-import { Card, Col as UnstyledCol, Row as UnstyledRow } from "react-bootstrap";
-import { Link as UnstyledLink } from "react-scroll";
-import styled from "styled-components";
-import Button from "../Buttons/StyledButton";
+import React from 'react'
+import { Card, Col as UnstyledCol, Row as UnstyledRow } from 'react-bootstrap'
+import { Link as UnstyledLink } from 'react-scroll'
+import styled from 'styled-components'
+import Button from '../Buttons/StyledButton'
 
-const bgColor = "rgb(32,33,39)";
+const bgColor = 'rgb(32,33,39)'
 
 const SpecialCard = (props) => {
   const {
-    title = "ITALIAN PIZZA",
+    title = 'ITALIAN PIZZA',
     text = "The Chef's delicious Italian Pizza made with the finest ingredients imported directly from Italy.",
-    oldPrice = "$40",
-    newPrice = "$20",
-    discount = "20%",
-  } = props;
+    oldPrice = '$40',
+    newPrice = '$20',
+    discount = '20%',
+  } = props
   return (
     <StyledCard>
       <StyledCardBody>
@@ -44,8 +44,8 @@ const SpecialCard = (props) => {
         <VectorArt src="https://cdn.pixabay.com/photo/2012/04/13/10/52/pizza-31799_960_720.png" />
       </StyledCardBody>
     </StyledCard>
-  );
-};
+  )
+}
 
 // BOOTSTRAP STYLES
 
@@ -56,40 +56,40 @@ const VectorArt = styled.img`
   bottom: 7%;
   width: 75px;
   height: 75px;
-`;
+`
 
 const Col = styled(UnstyledCol)`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Row = styled(UnstyledRow)`
   margin: 20px;
-`;
+`
 
 const StyledText = styled(Card.Text)`
   color: #a19fa0;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 20px;
-`;
+`
 
 const StyledName = styled(Card.Subtitle)`
   color: #fcfcfc;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
-`;
+`
 
 const StyledPosition = styled(Card.Text)`
   color: white;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #a19fa0;
   font-size: 0.8em;
   margin-bottom: 30px;
-`;
+`
 
 const StyledCard = styled(Card)`
   background-color: ${bgColor};
@@ -106,14 +106,14 @@ const StyledCard = styled(Card)`
   @media (max-width: 450px) {
     transform: scale(0.8);
   }
-`;
+`
 
 const StyledCardBody = styled(Card.Body)`
   border: 2px solid #33343c;
   display: grid;
   justify-items: center;
   background-color: #18191e;
-`;
+`
 
 const Discount = styled.div`
   color: black;
@@ -123,14 +123,14 @@ const Discount = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Title = styled(Card.Title)`
   color: white;
   text-transform: uppercase;
   margin: 20px 0px;
   font-size: 2em;
-`;
+`
 
 const OldPrice = styled.div`
   text-decoration: line-through;
@@ -141,8 +141,8 @@ const OldPrice = styled.div`
   padding: 10px 0 20px 0;
   margin: 0 15px 0 0;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-`;
+  font-family: 'Montserrat', sans-serif;
+`
 
 const DiscountPrice = styled.div`
   float: right;
@@ -152,9 +152,9 @@ const DiscountPrice = styled.div`
   padding: 10px 0 20px 0;
   margin: 0;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
-`;
+  font-family: 'Montserrat', sans-serif;
+`
 
-const Link = styled(UnstyledLink)``;
+const Link = styled(UnstyledLink)``
 
-export default SpecialCard;
+export default SpecialCard
