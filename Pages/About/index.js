@@ -10,6 +10,7 @@ import styled from 'styled-components'
 import { AboutCard } from '../../Components/Card'
 import Heading from '../../Components/Heading'
 import { ThemedContainer } from '../../Themes/DarkTheme'
+import { nameRestaurant } from '../../../../private'
 
 // TODO - media query to hide right column (with image) on small screens
 
@@ -45,7 +46,7 @@ const About = () => (
             <Col xs={12} className="d-flex justify-content-center">
               <Heading
                 topHeading="Our story"
-                bottomHeading="About Gioventino's"
+                bottomHeading={`About ${nameRestaurant}`}
               />
             </Col>
           </Row>

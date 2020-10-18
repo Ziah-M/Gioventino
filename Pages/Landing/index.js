@@ -4,6 +4,7 @@ import { Link as UnstyledLink } from 'react-scroll'
 import styled from 'styled-components'
 import Button from '../../Components/Buttons/StyledButton'
 import { ThemedContainer } from '../../Themes/AnimatedImgTheme'
+import {nameRestaurant} from '../../../../private'
 
 const Landing = () => (
   <Box>
@@ -22,8 +23,8 @@ const Landing = () => (
 
 const Content = ({
   topHeading = 'Welcome to',
-  middleHeading = "Gioventino's",
-  bottomHeading = 'Authentic Sydney Pizza',
+  middleHeading = `${nameRestaurant}`,
+  bottomHeading = 'Authentic Italian Pizza',
 }) => (
   <Wrapper id="top">
     <Row>
